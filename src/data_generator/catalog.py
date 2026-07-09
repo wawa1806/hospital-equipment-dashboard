@@ -1,5 +1,3 @@
-
-
 EQUIPOS_POR_CLASE: dict[str, list[str]] = {
     "Soporte vital": [
         "Ventilador mecánico",
@@ -84,6 +82,12 @@ EQUIPOS_POR_CLASE: dict[str, list[str]] = {
         "Electroestimulador",
     ],
 }
+
+CLASE_POR_EQUIPO: dict[str, str] = {
+        equipo: clase
+        for clase, lista in EQUIPOS_POR_CLASE.items()
+        for equipo in lista
+    }
 
 
 MARCAS_POR_EQUIPO: dict[str, list[str]] = {
@@ -1049,8 +1053,128 @@ SERVICIOS_CLINICOS: list[str] = [
     "Cuidados Paliativos",
 ]
 
+UBICACION_POR_SERVICIO: dict[str, tuple[str, int]] = {
+    "Urgencia": ("A", 1),
+    "UCI Adulto": ("A", 3),
+    "UTI / Cuidados Intermedios": ("B", 3),
+    "Pabellón Quirúrgico": ("A", 2),
+    "Hospitalización": ("B", 4),
+    "Medicina Interna": ("B", 5),
+    "Cirugía": ("B", 6),
+    "Traumatología": ("B", 6),
+    "Cardiología": ("A", 4),
+    "Ginecología y Obstetricia": ("B", 2),
+    "Neonatología": ("B", 3),
+    "Pediatría": ("B", 4),
+    "Imagenología": ("A", 2),
+    "Laboratorio Clínico": ("A", 6),
+    "Esterilización": ("D", 2),
+    "Farmacia": ("A", 1),
+    "Endoscopía": ("A", 5),
+    "Kinesiología / Rehabilitación": ("C", 1),
+    "Odontología": ("C", 2),
+    "Oftalmología": ("C", 3),
+    "Corta estancia": ("A", 1),
+    "Hospital de Día": ("C", 1),
+    "Bodega": ("D", 1),
+    "Cuidados Paliativos": ("B", 7),
+}
 
-
+SERVICIOS_POR_CLASE: dict[str, list[str]] = {
+    "Soporte vital": [
+        "UCI Adulto",
+        "UTI / Cuidados Intermedios",
+        "Urgencia",
+        "Pabellón Quirúrgico",
+        "Cirugía",
+        "Corta estancia",
+        "Cardiología",
+        "Ginecología y Obstetricia",
+        "Neonatología",
+        "Pediatría",
+        "Endoscopía",
+    ],
+    "Monitoreo": [
+        "Urgencia",
+        "UCI Adulto",
+        "UTI / Cuidados Intermedios",
+        "Pabellón Quirúrgico",
+        "Hospitalización",
+        "Medicina Interna",
+        "Cirugía",
+        "Traumatología",
+        "Cardiología",
+        "Ginecología y Obstetricia",
+        "Neonatología",
+        "Pediatría",
+        "Corta estancia",
+        "Hospital de Día",
+        "Endoscopía",
+        "Cuidados Paliativos",
+    ],
+    "Imagenología": [
+        "Imagenología",
+        "Urgencia",
+        "Pabellón Quirúrgico",
+        "Traumatología",
+        "Cardiología",
+        "Ginecología y Obstetricia",
+        "Endoscopía",
+    ],
+    "Esterilización": [
+        "Esterilización",
+    ],
+    "Laboratorio": [
+        "Laboratorio Clínico",
+        "Farmacia",
+        "Pabellón Quirúrgico",
+        "UTI / Cuidados Intermedios",
+        "Hospitalización",
+        "Medicina Interna",
+        "Cardiología",
+        "Pediatría",
+        "Hospital de Día",
+    ],
+    "Neonatología": [
+        "Neonatología",
+        "Ginecología y Obstetricia",
+        "Pediatría",
+        "Urgencia",
+    ],
+    "Odontología": [
+        "Odontología",
+    ],
+    "Oftalmología": [
+        "Oftalmología",
+    ],
+    "Apoyo a diagnóstico": [
+        "Urgencia",
+        "UCI Adulto",
+        "UTI / Cuidados Intermedios",
+        "Pabellón Quirúrgico",
+        "Hospitalización",
+        "Medicina Interna",
+        "Cirugía",
+        "Traumatología",
+        "Cardiología",
+        "Ginecología y Obstetricia",
+        "Neonatología",
+        "Pediatría",
+        "Imagenología",
+        "Laboratorio Clínico",
+        "Farmacia",
+        "Endoscopía",
+        "Kinesiología / Rehabilitación",
+        "Odontología",
+        "Oftalmología",
+        "Corta estancia",
+        "Hospital de Día",
+        "Cuidados Paliativos",
+    ],
+    "Rehabilitación": [
+        "Kinesiología / Rehabilitación",
+    ],
+}
 
 
 ESPECIALIDAD_POR_CLASE: dict[str, str] = {
@@ -1074,45 +1198,38 @@ ABUNDANCIA_POR_EQUIPO: dict[str, int] = {
     "Bomba de infusión": 100,
     "Camilla de transporte": 45,
     "Bomba PCA": 12,
-
     "Monitor multiparámetro": 70,
     "Electrocardiógrafo": 18,
     "Oxímetro central": 8,
     "Holter": 4,
     "Monitor signos vitales": 40,
-
     "Ecógrafo": 18,
     "Rayos X portátil": 6,
     "Arco C": 4,
     "Mamógrafo": 1,
     "Tomógrafo CT": 2,
     "Resonador magnético": 1,
-
     "Autoclave": 5,
     "Lavadora desinfectora": 4,
     "Selladora térmica": 8,
     "Mesa de inspección": 5,
     "Carro de transporte estéril": 18,
-
     "Centrífuga": 12,
     "Analizador hematológico": 4,
     "Microscopio": 8,
     "Baño termorregulado": 5,
     "Refrigerador clínico": 10,
     "Analizador bioquímico": 4,
-
     "Incubadora": 14,
     "Cuna radiante": 10,
     "Fototerapia": 9,
     "Ventilador neonatal": 7,
-
     "Sillón dental": 4,
     "Compresor dental": 2,
     "Lámpara de fotocurado": 5,
     "Motor endodoncia": 3,
     "TAC dental": 1,
     "Unidad dental": 4,
-
     "Lámpara de hendidura": 3,
     "Tonómetro": 3,
     "Autorrefractómetro": 2,
@@ -1121,7 +1238,6 @@ ABUNDANCIA_POR_EQUIPO: dict[str, int] = {
     "OCT": 1,
     "Lensómetro": 1,
     "Microscopio quirúrgico oftalmológico": 1,
-
     "Esfigmomanómetro": 70,
     "Bioimpedanciómetro": 3,
     "Termómetro clínico": 75,
@@ -1134,7 +1250,6 @@ ABUNDANCIA_POR_EQUIPO: dict[str, int] = {
     "Audiómetro": 2,
     "Balanza clínica": 30,
     "Tallímetro": 20,
-
     "Trotadora": 2,
     "Camilla de fisioterapia": 10,
     "Bicicleta ergométrica": 4,
