@@ -6,6 +6,13 @@ FECHA_INICIO = date(2023, 1, 1)
 FECHA_CORTE = date(2026, 6, 30)
 FECHA_FIN_PLAN = date(2026, 12, 31)
 
+FECHA_MIN_ADQUISICION = date(2010,1,1)
+
+PCT_CON_GARANTIA = 0.50
+# Porcentaje de equipos que no están en el plan de mantenimiento
+PCT_EQUIPOS_SIN_PLAN = 0.30
+# Porcentaje de equipos con mantenciones planificadas que no se ejecutaron
+PCT_INCUMPLIMIENTO_PLAN = 0.12
 
 DIST_ESTADO_ACTUAL: dict[str, float] = {
     "Bueno": 0.87,
@@ -14,10 +21,11 @@ DIST_ESTADO_ACTUAL: dict[str, float] = {
     "Baja": 0.02,
 }
 
-# Porcentaje de equipos que no están en el plan de mantenimiento
-PCT_EQUIPOS_SIN_PLAN = 0.30
-# Porcentaje de equipos con mantenciones planificadas que no se ejecutaron
-PCT_INCUMPLIMIENTO_PLAN = 0.12
+DIST_ESTRATEGIA :  dict[str, float] = {
+    "Interno" : 0.50,
+    "Externo" : 0.20,
+    "Contrato" : 0.30,
+}
 
 DIST_MODALIDAD: dict[str, float] = {
     "Propio": 0.80,
