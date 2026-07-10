@@ -171,7 +171,7 @@ def generar_dim_tecnico(faker: Faker) -> pd.DataFrame:
 
     df = pd.DataFrame(
         {
-            "tecnico_id": np.arange(1, n + 1),  
+            "tecnico_id": np.arange(1, n + 1),
             "nombre": nombres,
             "tipo": tipos,
             "especialidad": especialidades,
@@ -186,6 +186,7 @@ def generar_dim_tecnico(faker: Faker) -> pd.DataFrame:
             "especialidad",
         ]
     ]
+
 
 """
 | Columna | Tipo | Llave | Descripción | Valores válidos |
@@ -209,10 +210,7 @@ def generar_dim_tecnico(faker: Faker) -> pd.DataFrame:
 | estado_actual | string | -  | Estado actual en el que se encuentra el equipo | Bueno/Regular/Malo/Baja |
 
 
-Etapa 1 — el esqueleto que ya sabes hacer: equipo_id, codigo_inventario (f-string con {i:05d}), 
-nombre_equipo (sorteo ponderado con ABUNDANCIA_POR_EQUIPO — el snippet de normalización está en la spec), 
-clase_funcional (mapeo inverso — el ejercicio de dict comprehension),
-marca (list comprehension con rng.choice por fila). Con esto ya tienes un DataFrame que puedes mirar.
+
 
 Etapa 2 — los que requieren estructuras nuevas en catálogo: costo_adquisicion 
 (necesitas RANGO_COSTO_POR_CLASE — 10 tuplas (min, max), 
@@ -280,11 +278,18 @@ def generar_dim_equipo(rng:np.random.Generator) -> pd.DataFrame:
         "estado_actual",
     ]]
 
-     clase_funcional: derivada del nombre — necesitas el mapeo inverso equipo→clase. No lo escribas a mano 
-(60 entradas, ya existe la info en EQUIPOS_POR_CLASE): constrúyelo por comprensión al inicio del módulo o en 
+Y dentro del rango,
+distribución lognormal o triangular, no uniforme (muchos baratos, pocos caros).
+De paso: tu diccionario de datos dice tope $80M — con Tomógrafo y Resonador dentro, ese tope quedó corto; actualízalo.
 
-- marca: sorteo desde MARCAS_POR_EQUIPO[nombre] — fila a fila (una list comprehension con rng.choice está bien
-a esta escala).
+- vida_util_anios: por clase también sería lo fino (equipos de imagen duran más que termómetros), pero 
+uniforme 5-15 es aceptable v1. Tu llamada.
+modalidad_propiedad, estado_actual, bajo_plan_mantenimiento: sorteos con rng.choice(..., p=...) desde tus 
+dicts de config (list(d.keys()) / list(d.values())).
+
+- criticidad y clase_riesgo: NO uniformes al azar — dependen del tipo de equipo (un ventilador nunca es 
+criticidad Baja ni clase I). Decisión: o mapeos por equipo/clase en catálogo (fino) o probabilidades 
+condicionadas por clase funcional (intermedio). Elige y defiende.
 
 list comprehension
 [nueva_expresion for elemento in iterable]
@@ -302,30 +307,63 @@ cuadrados = {n: n ** 2 for n in numeros}
 print(cuadrados)
 {1: 1, 2: 4, 3: 9, 4: 16}
 
+
+vida_util_anios — tu llamada v1
+rng.integers(5, 16, size=N) uniforme es aceptable; por clase es más fino (imagenología 10-15, apoyo diagnóstico 5-8).
+30 segundos de decisión, cualquiera pasa.
+
+
 """
+
 
 def generar_dim_equipo(rng: np.random.Generator) -> pd.DataFrame:
 
     equipos = list(catalog.ABUNDANCIA_POR_EQUIPO)
     pesos = np.array(list(catalog.ABUNDANCIA_POR_EQUIPO.values()), dtype=float)
-    p = pesos / pesos.sum()          
+    p = pesos / pesos.sum()
     nombres = rng.choice(equipos, size=config.N_EQUIPOS, p=p)
-    codigos = [f"EQ-{i:05d}" for i in range(1, config.N_EQUIPOS + 1) ]
+    codigos = [f"EQ-{i:05d}" for i in range(1, config.N_EQUIPOS + 1)]
     clases = [catalog.CLASE_POR_EQUIPO[nombre] for nombre in nombres]
     marcas = [rng.choice(catalog.MARCAS_POR_EQUIPO[nombre]) for nombre in nombres]
 
-    df = pd.DataFrame({
-        "equipo_id": np.arange(1, config.N_EQUIPOS + 1),
-        "codigo_inventario": codigos,
-        "nombre_equipo": nombres,
-        "clase_funcional": clases,
-        "marca": marcas,
-    })
+    costos = [
+        rng.triangular(lo, lo + (hi - lo) * 0.5, hi)
+        for lo, hi in (catalog.RANGO_COSTO_POR_EQUIPO[nombre] for nombre in nombres)
+    ]
+    costos = np.round(costos, -3)
+    vida_util = rng.triangular(5, 13, 15.5, size=config.N_EQUIPOS).round().astype(int)
 
-    return df[[
-        "equipo_id",
-        "codigo_inventario",
-        "nombre_equipo",
-        "clase_funcional",
-        "marca",
-    ]]
+    clase_riesgo = [catalog.CLASE_RIESGO_POR_EQUIPO[nombre] for nombre in nombres]
+    criticidades = [
+        rng.choice(list(d), p=list(d.values()))
+        for d in (config.DIST_CRITICIDAD_POR_CLASE[clase] for clase in clases)
+    ]
+
+
+    df = pd.DataFrame(
+        {
+            "equipo_id": np.arange(1, config.N_EQUIPOS + 1),
+            "codigo_inventario": codigos,
+            "nombre_equipo": nombres,
+            "clase_funcional": clases,
+            "marca": marcas,
+            "clase_riesgo": clase_riesgo,
+            "criticidad": criticidades,
+            "costo_adquisicion": costos,
+            "vida_util_anios": vida_util,
+        }
+    )
+
+    return df[
+        [
+            "equipo_id",
+            "codigo_inventario",
+            "nombre_equipo",
+            "clase_funcional",
+            "marca",
+            "clase_riesgo",
+            "criticidad",
+            "costo_adquisicion",
+            "vida_util_anios",
+        ]
+    ]

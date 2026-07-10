@@ -84,11 +84,159 @@ EQUIPOS_POR_CLASE: dict[str, list[str]] = {
 }
 
 CLASE_POR_EQUIPO: dict[str, str] = {
-        equipo: clase
-        for clase, lista in EQUIPOS_POR_CLASE.items()
-        for equipo in lista
-    }
+    equipo: clase for clase, lista in EQUIPOS_POR_CLASE.items() for equipo in lista
+}
 
+
+RANGO_COSTO_POR_EQUIPO: dict[str, tuple[int, int]] = {
+    # Soporte Vital
+    "Ventilador mecánico": (15_000_000, 45_000_000),
+    "Máquina de anestesia": (25_000_000, 80_000_000),
+    "Desfibrilador": (2_800_000, 8_500_000),
+    "Bomba de infusión": (850_000, 2_500_000),
+    "Bomba PCA": (1_500_000, 3_500_000),
+    # Monitoreo
+    "Monitor multiparámetro": (1_500_000, 6_500_000),
+    "Electrocardiógrafo": (1_200_000, 4_500_000),
+    "Oxímetro central": (1_500_000, 4_000_000),
+    "Holter": (1_800_000, 5_000_000),
+    "Monitor signos vitales": (700_000, 2_200_000),
+    # Imagenología
+    "Ecógrafo": (12_000_000, 65_000_000),
+    "Rayos X portátil": (25_000_000, 70_000_000),
+    "Arco C": (80_000_000, 250_000_000),
+    "Mamógrafo": (120_000_000, 400_000_000),
+    "Tomógrafo CT": (350_000_000, 900_000_000),
+    "Resonador magnético": (500_000_000, 1_500_000_000),
+    # Esterilización
+    "Autoclave": (3_500_000, 48_000_000),
+    "Lavadora desinfectora": (8_000_000, 32_000_000),
+    "Selladora térmica": (600_000, 2_500_000),
+    "Mesa de inspección": (800_000, 3_000_000),
+    "Carro de transporte estéril": (800_000, 2_800_000),
+    # Laboratorio
+    "Centrífuga": (500_000, 5_000_000),
+    "Analizador hematológico": (6_000_000, 25_000_000),
+    "Microscopio": (600_000, 6_000_000),
+    "Baño termorregulado": (400_000, 1_800_000),
+    "Refrigerador clínico": (1_800_000, 7_500_000),
+    "Analizador bioquímico": (12_000_000, 55_000_000),
+    # Neonatología
+    "Incubadora": (6_500_000, 22_000_000),
+    "Cuna radiante": (4_500_000, 14_000_000),
+    "Fototerapia": (1_500_000, 5_500_000),
+    "Ventilador neonatal": (20_000_000, 55_000_000),
+    # Odontología
+    "Sillón dental": (3_500_000, 15_000_000),
+    "Compresor dental": (800_000, 3_800_000),
+    "Lámpara de fotocurado": (180_000, 850_000),
+    "Motor endodoncia": (600_000, 2_500_000),
+    "TAC dental": (45_000_000, 120_000_000),
+    "Unidad dental": (4_500_000, 20_000_000),
+    # Oftalmología
+    "Lámpara de hendidura": (3_800_000, 16_000_000),
+    "Tonómetro": (2_200_000, 7_500_000),
+    "Autorrefractómetro": (4_500_000, 14_000_000),
+    "Retinógrafo": (8_500_000, 32_000_000),
+    "Campímetro": (10_000_000, 28_000_000),
+    "OCT": (35_000_000, 85_000_000),
+    "Lensómetro": (1_200_000, 4_500_000),
+    "Microscopio quirúrgico oftalmológico": (28_000_000, 110_000_000),
+    # Apoyo a diagnóstico
+    "Esfigmomanómetro": (60_000, 350_000),
+    "Bioimpedanciómetro": (1_200_000, 12_000_000),
+    "Termómetro clínico": (10_000, 200_000),
+    "Otoscopio": (120_000, 900_000),
+    "Oftalmoscopio": (160_000, 1_000_000),
+    "Doppler fetal": (180_000, 1_400_000),
+    "Doppler vascular": (350_000, 2_800_000),
+    "Glucómetro": (25_000, 80_000),
+    "Espirómetro": (900_000, 3_500_000),
+    "Audiómetro": (2_200_000, 7_500_000),
+    "Balanza clínica": (180_000, 1_500_000),
+    "Tallímetro": (50_000, 450_000),
+    "Camilla de transporte": (2_000_000, 6_500_000),
+    # Rehabilitación
+    "Trotadora": (2_500_000, 8_000_000),
+    "Camilla de fisioterapia": (400_000, 3_000_000),
+    "Bicicleta ergométrica": (1_200_000, 5_000_000),
+    "Electroestimulador": (500_000, 4_000_000),
+}
+
+CLASE_RIESGO_POR_EQUIPO: dict[str, str] = {
+    # Soporte Vital
+    "Ventilador mecánico": "III",
+    "Máquina de anestesia": "III",
+    "Desfibrilador": "III",
+    "Bomba de infusión": "III",
+    "Bomba PCA": "III",
+    # Monitoreo
+    "Monitor multiparámetro": "III",
+    "Electrocardiógrafo": "II",
+    "Oxímetro central": "III",
+    "Holter": "II",
+    "Monitor signos vitales": "II",
+    # Imagenología
+    "Ecógrafo": "II",
+    "Rayos X portátil": "II",
+    "Arco C": "II",
+    "Mamógrafo": "II",
+    "Tomógrafo CT": "II",
+    "Resonador magnético": "II",
+    # Esterilización
+    "Autoclave": "II",
+    "Lavadora desinfectora": "II",
+    "Selladora térmica": "I",
+    "Mesa de inspección": "I",
+    "Carro de transporte estéril": "I",
+    # Laboratorio
+    "Centrífuga": "I",
+    "Analizador hematológico": "II",
+    "Microscopio": "I",
+    "Baño termorregulado": "I",
+    "Refrigerador clínico": "I",
+    "Analizador bioquímico": "II",
+    # Neonatología
+    "Incubadora": "III",
+    "Cuna radiante": "II",
+    "Fototerapia": "II",
+    "Ventilador neonatal": "III",
+    # Odontología
+    "Sillón dental": "I",
+    "Compresor dental": "I",
+    "Lámpara de fotocurado": "I",
+    "Motor endodoncia": "II",
+    "TAC dental": "II",
+    "Unidad dental": "I",
+    # Oftalmología
+    "Lámpara de hendidura": "I",
+    "Tonómetro": "II",
+    "Autorrefractómetro": "I",
+    "Retinógrafo": "II",
+    "Campímetro": "II",
+    "OCT": "II",
+    "Lensómetro": "I",
+    "Microscopio quirúrgico oftalmológico": "II",
+    # Apoyo a diagnóstico
+    "Esfigmomanómetro": "II",
+    "Bioimpedanciómetro": "II",
+    "Termómetro clínico": "II",
+    "Otoscopio": "I",
+    "Oftalmoscopio": "I",
+    "Doppler fetal": "II",
+    "Doppler vascular": "II",
+    "Glucómetro": "II",
+    "Espirómetro": "II",
+    "Audiómetro": "II",
+    "Balanza clínica": "I",
+    "Tallímetro": "I",
+    "Camilla de transporte": "I",
+    # Rehabilitación
+    "Trotadora": "I",
+    "Camilla de fisioterapia": "I",
+    "Bicicleta ergométrica": "I",
+    "Electroestimulador": "II",
+}
 
 MARCAS_POR_EQUIPO: dict[str, list[str]] = {
     "Ventilador mecánico": [
@@ -117,11 +265,6 @@ MARCAS_POR_EQUIPO: dict[str, list[str]] = {
         "ICU Medical",
         "BD/CareFusion",
         "Mindray",
-    ],
-    "Camilla de transporte": [
-        "Malvestio",
-        "Hillrom/Baxter",
-        "Stryker/Physio-Control",
     ],
     "Bomba PCA": [
         "B. Braun",
@@ -528,6 +671,11 @@ MARCAS_POR_EQUIPO: dict[str, list[str]] = {
         "Tanita",
         "Gima",
     ],
+    "Camilla de transporte": [
+        "Malvestio",
+        "Hillrom/Baxter",
+        "Stryker/Physio-Control",
+    ],
     "Trotadora": [
         "Technogym",
         "Life Fitness",
@@ -606,14 +754,6 @@ FALLAS_POR_EQUIPO: dict[str, list[str]] = {
         "Batería agotada",
         "Caudal incorrecto",
         "Bloqueo de seguridad dañado",
-    ],
-    "Camilla de transporte": [
-        "Ruedas trabadas",
-        "Frenos defectuosos",
-        "Barandas sueltas",
-        "Sistema hidráulico con fuga",
-        "Colchón dañado",
-        "Mecanismo de altura no funciona",
     ],
     "Monitor multiparámetro": [
         "No enciende",
@@ -996,6 +1136,14 @@ FALLAS_POR_EQUIPO: dict[str, list[str]] = {
         "Piezas sueltas",
         "Escala dañada",
     ],
+    "Camilla de transporte": [
+        "Ruedas trabadas",
+        "Frenos defectuosos",
+        "Barandas sueltas",
+        "Sistema hidráulico con fuga",
+        "Colchón dañado",
+        "Mecanismo de altura no funciona",
+    ],
     "Trotadora": [
         "Banda desalineada",
         "Motor falla",
@@ -1196,7 +1344,6 @@ ABUNDANCIA_POR_EQUIPO: dict[str, int] = {
     "Máquina de anestesia": 12,
     "Desfibrilador": 25,
     "Bomba de infusión": 100,
-    "Camilla de transporte": 45,
     "Bomba PCA": 12,
     "Monitor multiparámetro": 70,
     "Electrocardiógrafo": 18,
@@ -1250,6 +1397,7 @@ ABUNDANCIA_POR_EQUIPO: dict[str, int] = {
     "Audiómetro": 2,
     "Balanza clínica": 30,
     "Tallímetro": 20,
+    "Camilla de transporte": 45,
     "Trotadora": 2,
     "Camilla de fisioterapia": 10,
     "Bicicleta ergométrica": 4,
