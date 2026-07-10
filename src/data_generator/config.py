@@ -6,7 +6,7 @@ FECHA_INICIO = date(2023, 1, 1)
 FECHA_CORTE = date(2026, 6, 30)
 FECHA_FIN_PLAN = date(2026, 12, 31)
 
-FECHA_MIN_ADQUISICION = date(2010,1,1)
+FECHA_MIN_ADQUISICION = date(2010, 1, 1)
 
 PCT_CON_GARANTIA = 0.50
 # Porcentaje de equipos que no están en el plan de mantenimiento
@@ -21,10 +21,10 @@ DIST_ESTADO_ACTUAL: dict[str, float] = {
     "Baja": 0.02,
 }
 
-DIST_ESTRATEGIA :  dict[str, float] = {
-    "Interno" : 0.50,
-    "Externo" : 0.20,
-    "Contrato" : 0.30,
+DIST_ESTRATEGIA: dict[str, float] = {
+    "Interno": 0.50,
+    "Externo": 0.20,
+    "Contrato": 0.30,
 }
 
 DIST_MODALIDAD: dict[str, float] = {
@@ -52,4 +52,10 @@ DIST_CRITICIDAD_POR_CLASE: dict[str, dict[str, float]] = {
     "Oftalmología": {"Alta": 0.15, "Media": 0.35, "Baja": 0.5},
     "Apoyo a diagnóstico": {"Alta": 0.05, "Media": 0.35, "Baja": 0.6},
     "Rehabilitación": {"Alta": 0.0, "Media": 0.15, "Baja": 0.85},
+}
+
+FRECUENCIA_PLAN_POR_CRITICIDAD: dict[str, tuple[int, int]] = {
+    "Alta": (2, 3),
+    "Media": (1, 2),
+    "Baja": (1, 1),
 }
