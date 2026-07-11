@@ -38,10 +38,11 @@ def generar_fact_plan(
     for _, equipo in en_plan.iterrows():
         lo, hi = config.FRECUENCIA_PLAN_POR_CRITICIDAD[equipo["criticidad"]]
         freq = rng.integers(lo, hi + 1)
+        offset = int(rng.integers(0, 12))
 
         for anio in range(config.FECHA_INICIO.year, config.FECHA_FIN_PLAN.year + 1):
             for k in range(freq):
-                mes = int(12 / freq * k) + 1
+                mes = (offset + int(12 / freq*k)) % 12 + 1
                 dia = int(rng.integers(1, 29))
                 fecha_plan = date(anio, mes, dia)
                 if fecha_plan >= equipo["fecha_adquisicion"]:
