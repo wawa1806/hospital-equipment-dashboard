@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from datetime import date
 
-from data_generator import catalog, config, dimensiones
+from data_generator import config
 
 
 def generar_fact_plan(

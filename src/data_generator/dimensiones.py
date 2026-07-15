@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from faker import Faker
-from datetime import date, timedelta
+from datetime import timedelta
 
 from data_generator import catalog, config
 

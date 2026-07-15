@@ -216,3 +216,41 @@ FRACCION_COSTO_PREVENTIVA: dict[str, tuple[float, float]] = {
     "Bicicleta ergométrica": (0.05, 0.10),
     "Electroestimulador": (0.05, 0.12),
 }
+
+TASA_EXTRA_FALLA_INVIERNO: dict[str, float] = {
+    "Ventilador mecánico": 0.25,
+    "Ventilador neonatal": 0.25,
+    "Rayos X portátil": 0.25,
+    "Bomba de infusión": 0.20,
+    "Incubadora": 0.20,
+    "Monitor multiparámetro": 0.20,
+    "Monitor signos vitales": 0.15,
+    "Oxímetro central": 0.15,
+    "Autoclave": 0.15,
+    "Analizador hematológico": 0.15,
+    "Analizador bioquímico": 0.15,
+    "Refrigerador clínico": 0.10,
+    "Desfibrilador": 0.10,
+    "Electrocardiógrafo": 0.10,
+}
+
+
+FACTOR_COSTO_CORRECTIVO = 3.0
+
+FRACCION_CORRECTIVA_MAX = 0.10
+
+FRACCION_MO_CORRECTIVA_MAX = 0.03
+
+COSTO_CORRECTIVO_MAX = 60_000_000
+
+DURACION_DIAS_CORRECTIVA = (1, 15)
+
+HORAS_DETENCION_CORRECTIVA = (8, 300)
+
+FACTOR_EDAD = 0.10
+
+EDAD_REFERENCIA = 8
+
+PCT_ABIERTA_SI_RECIENTE = 0.9
+
+VENTANA_ABIERTAS_DIAS = 60
