@@ -1,9 +1,10 @@
 import numpy as np
 import pandas as pd
 from faker import Faker
-from datetime import date, timedelta
+from datetime import timedelta
 
 from data_generator import catalog, config
+
 
 def generar_dim_tipo_mantenimiento() -> pd.DataFrame:
 
@@ -19,6 +20,7 @@ def generar_dim_tipo_mantenimiento() -> pd.DataFrame:
             "nombre_tipo",
         ]
     ]
+
 
 def generar_dim_ubicacion() -> pd.DataFrame:
 
@@ -100,33 +102,49 @@ def generar_dim_equipo(rng: np.random.Generator) -> pd.DataFrame:
     ]
 
     base = config.FECHA_MIN_ADQUISICION
-    max_dias = (config.FECHA_CORTE - base).days          # restar dates da un timedelta; .days lo hace int
+    max_dias = (
+        config.FECHA_CORTE - base
+    ).days  # restar dates da un timedelta; .days lo hace int
     dias = rng.integers(0, max_dias + 1, size=config.N_EQUIPOS)
     fechas_adq = [base + timedelta(days=int(d)) for d in dias]
 
     fechas_gar = []
     for fecha in fechas_adq:
-        if rng.random() < config.PCT_CON_GARANTIA: #tiene garantía?
-            dias_garantia = int(rng.integers(365, 365 * 3 + 1)) # 1 a 3 años (en días)
+        if rng.random() < config.PCT_CON_GARANTIA:  # tiene garantía?
+            dias_garantia = int(rng.integers(365, 365 * 3 + 1))  # 1 a 3 años (en días)
             fechas_gar.append(fecha + timedelta(days=dias_garantia))
         else:
             fechas_gar.append(pd.NaT)
 
+    modalidad = rng.choice(
+        list(config.DIST_MODALIDAD),
+        size=config.N_EQUIPOS,
+        p=list(config.DIST_MODALIDAD.values()),
+    )
 
-    modalidad = rng.choice(list(config.DIST_MODALIDAD), size=config.N_EQUIPOS, p=list(config.DIST_MODALIDAD.values()))
-    
-    estado = rng.choice(list(config.DIST_ESTADO_ACTUAL), size=config.N_EQUIPOS, p=list(config.DIST_ESTADO_ACTUAL.values()))
+    estado = rng.choice(
+        list(config.DIST_ESTADO_ACTUAL),
+        size=config.N_EQUIPOS,
+        p=list(config.DIST_ESTADO_ACTUAL.values()),
+    )
 
     bajo_plan = rng.random(config.N_EQUIPOS) < (1 - config.PCT_EQUIPOS_SIN_PLAN)
 
-    estrategias = rng.choice(list(config.DIST_ESTRATEGIA), size=config.N_EQUIPOS, p=list(config.DIST_ESTRATEGIA.values()))
+    estrategias = rng.choice(
+        list(config.DIST_ESTRATEGIA),
+        size=config.N_EQUIPOS,
+        p=list(config.DIST_ESTRATEGIA.values()),
+    )
 
-    serie = [f"SN-{i:04d}-{rng.integers(10**7, 10**8)}" for i in range(1, config.N_EQUIPOS + 1)]
+    serie = [
+        f"SN-{i:04d}-{rng.integers(10**7, 10**8)}"
+        for i in range(1, config.N_EQUIPOS + 1)
+    ]
 
     modelo = [
         f"{''.join(c for c in marca if c.isalpha())[:2].upper()}-{rng.integers(100, 1000)}"
         for marca in marcas
-    ] 
+    ]
     df = pd.DataFrame(
         {
             "equipo_id": np.arange(1, config.N_EQUIPOS + 1),
@@ -142,10 +160,10 @@ def generar_dim_equipo(rng: np.random.Generator) -> pd.DataFrame:
             "costo_adquisicion": costos,
             "vida_util_anios": vida_util,
             "modalidad_propiedad": modalidad,
-            "fecha_vencimiento_garantia": fechas_gar ,
+            "fecha_vencimiento_garantia": fechas_gar,
             "bajo_plan_mantenimiento": bajo_plan,
-            "estrategia_mantenimiento":estrategias,
-            "estado_actual":estado, 
+            "estrategia_mantenimiento": estrategias,
+            "estado_actual": estado,
         }
     )
 

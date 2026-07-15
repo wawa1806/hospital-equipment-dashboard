@@ -1338,7 +1338,7 @@ ESPECIALIDAD_POR_CLASE: dict[str, str] = {
     "Rehabilitación": "Mecatrónica",
 }
 
-# Peso relativo de abundancia (no necesita sumar 1; se normaliza al generar)
+# Peso relativo de abundancia
 ABUNDANCIA_POR_EQUIPO: dict[str, int] = {
     "Ventilador mecánico": 25,
     "Máquina de anestesia": 12,

@@ -1,0 +1,25 @@
+﻿ubicacion_id,servicio_clinico,piso,edificio
+1,Urgencia,1,A
+2,UCI Adulto,3,A
+3,UTI / Cuidados Intermedios,3,B
+4,Pabellón Quirúrgico,2,A
+5,Hospitalización,4,B
+6,Medicina Interna,5,B
+7,Cirugía,6,B
+8,Traumatología,6,B
+9,Cardiología,4,A
+10,Ginecología y Obstetricia,2,B
+11,Neonatología,3,B
+12,Pediatría,4,B
+13,Imagenología,2,A
+14,Laboratorio Clínico,6,A
+15,Esterilización,2,D
+16,Farmacia,1,A
+17,Endoscopía,5,A
+18,Kinesiología / Rehabilitación,1,C
+19,Odontología,2,C
+20,Oftalmología,3,C
+21,Corta estancia,1,A
+22,Hospital de Día,1,C
+23,Bodega,1,D
+24,Cuidados Paliativos,7,B
