@@ -1,53 +1,24 @@
 from data_generator import catalog, config
-
+import pytest
 
 def _equipos_del_catalogo() -> set[str]:
     return {e for lista in catalog.EQUIPOS_POR_CLASE.values() for e in lista}
 
 
-# ── Cobertura total (==): cada dict por-equipo debe cubrir exactamente el catálogo ──
-
-def test_marcas_cubren_todos_los_equipos():
+@pytest.mark.parametrize("nombre, dict_auditado", [
+    ("MARCAS_POR_EQUIPO", catalog.MARCAS_POR_EQUIPO),
+    ("FALLAS_POR_EQUIPO", catalog.FALLAS_POR_EQUIPO),
+    ("ABUNDANCIA_POR_EQUIPO", catalog.ABUNDANCIA_POR_EQUIPO),
+    ("CLASE_RIESGO_POR_EQUIPO", catalog.CLASE_RIESGO_POR_EQUIPO),
+    ("TASA_BASE_POR_EQUIPO", config.TASA_BASE_POR_EQUIPO),
+    ("FRACCION_COSTO_PREVENTIVA", config.FRACCION_COSTO_PREVENTIVA),
+])
+def test_cobertura_total_del_catalogo(nombre, dict_auditado):
     equipos = _equipos_del_catalogo()
-    assert equipos == set(catalog.MARCAS_POR_EQUIPO), (
-        f"faltan: {equipos - set(catalog.MARCAS_POR_EQUIPO)}, "
-        f"sobran: {set(catalog.MARCAS_POR_EQUIPO) - equipos}"
+    assert equipos == set(dict_auditado), (
+        f"{nombre} — faltan: {equipos - set(dict_auditado)}, sobran: {set(dict_auditado) - equipos}"
     )
 
-def test_fallas_cubren_todos_los_equipos():
-    equipos = _equipos_del_catalogo()
-    assert equipos == set(catalog.FALLAS_POR_EQUIPO), (
-        f"faltan: {equipos - set(catalog.FALLAS_POR_EQUIPO)}, "
-        f"sobran: {set(catalog.FALLAS_POR_EQUIPO) - equipos}"
-    )
-
-def test_abundancia_cubren_todos_los_equipos():
-    equipos = _equipos_del_catalogo()
-    assert equipos == set(catalog.ABUNDANCIA_POR_EQUIPO), (
-        f"faltan: {equipos - set(catalog.ABUNDANCIA_POR_EQUIPO)}, "
-        f"sobran: {set(catalog.ABUNDANCIA_POR_EQUIPO) - equipos}"
-    )
-
-def test_clase_riesgo_cubren_todos_los_equipos():
-    equipos = _equipos_del_catalogo()
-    assert equipos == set(catalog.CLASE_RIESGO_POR_EQUIPO), (
-        f"faltan: {equipos - set(catalog.CLASE_RIESGO_POR_EQUIPO)}, "
-        f"sobran: {set(catalog.CLASE_RIESGO_POR_EQUIPO) - equipos}"
-    )
-
-def test_tasa_base_cubren_todos_los_equipos():
-    equipos = _equipos_del_catalogo()
-    assert equipos == set(config.TASA_BASE_POR_EQUIPO), (
-        f"faltan: {equipos - set(config.TASA_BASE_POR_EQUIPO)}, "
-        f"sobran: {set(config.TASA_BASE_POR_EQUIPO) - equipos}"
-    )
-
-def test_fraccion_costo_preventiva_cubren_todos_los_equipos():
-    equipos = _equipos_del_catalogo()
-    assert equipos == set(config.FRACCION_COSTO_PREVENTIVA), (
-        f"faltan: {equipos - set(config.FRACCION_COSTO_PREVENTIVA)}, "
-        f"sobran: {set(config.FRACCION_COSTO_PREVENTIVA) - equipos}"
-    )
 # ── Subconjunto (⊆): dicts parciales solo pueden referir equipos/servicios existentes ──
 
 def test_invierno_solo_contiene_equipos_existentes():
