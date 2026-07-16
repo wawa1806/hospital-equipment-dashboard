@@ -19,7 +19,7 @@ def test_cobertura_total_del_catalogo(nombre, dict_auditado):
         f"{nombre} — faltan: {equipos - set(dict_auditado)}, sobran: {set(dict_auditado) - equipos}"
     )
 
-# ── Subconjunto (⊆): dicts parciales solo pueden referir equipos/servicios existentes ──
+#Subconjuntos
 
 def test_invierno_solo_contiene_equipos_existentes():
     fantasmas = set(config.TASA_EXTRA_FALLA_INVIERNO) - _equipos_del_catalogo()
@@ -31,7 +31,7 @@ def test_servicios_usados_existen_en_ubicaciones():
     assert not sin_ubicacion, f"servicios sin ubicación: {sin_ubicacion}"
 
 
-# ── Cobertura de clases ──
+#Cobertura de clases
 
 def test_especialidades_cubren_todas_las_clases():
     clases = set(catalog.EQUIPOS_POR_CLASE)
@@ -52,7 +52,7 @@ def test_dist_criticidad_por_clase_cubren_todas_las_clases():
     )
 
 
-# ── Distribuciones ──
+#Distribuciones
 
 def test_distribuciones_simples_suman_uno():
     for nombre, dist in [

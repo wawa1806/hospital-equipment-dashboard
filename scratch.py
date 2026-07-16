@@ -39,9 +39,7 @@ for equipo in ["Ventilador mecánico", "Tallímetro"]:
     print(equipo)
     print(corr[corr["nombre_equipo"] == equipo]["fecha_solicitud"].dt.month
           .value_counts().sort_index())
-
     
-# fuera del loop:
 inv = corr[
     corr["nombre_equipo"].isin(config.TASA_EXTRA_FALLA_INVIERNO)
     & (corr["fecha_solicitud"].dt.year < 2026)
@@ -52,13 +50,13 @@ print(inv["fecha_solicitud"].dt.month.value_counts().sort_index())
 print(fact_ordenes.groupby("tipo_mantenimiento_id")["costo_repuestos"].describe())
 print()
 
-# --- Verificación técnico-especialidad (esperado: 0) ---
+#Verificación técnico-especialidad (esperado: 0)
 chk = fact_ordenes.merge(dim_equipo[["equipo_id", "nombre_equipo", "clase_funcional"]], on="equipo_id")
 chk = chk.merge(dim_tecnico[["tecnico_id", "especialidad"]], on="tecnico_id")
 chk["esp_esperada"] = [catalog.ESPECIALIDAD_POR_CLASE[c] for c in chk["clase_funcional"]]
 print("Técnico fuera de especialidad:", (chk["especialidad"] != chk["esp_esperada"]).sum())
 
-# --- Verificación ubicación-clase (esperado: 0) ---
+#Verificación ubicación-clase (esperado: 0)
 chk = chk.merge(dim_ubicacion[["ubicacion_id", "servicio_clinico"]], on="ubicacion_id")
 fuera = sum(
     serv not in catalog.SERVICIOS_POR_CLASE[catalog.CLASE_POR_EQUIPO[nom]]
@@ -68,8 +66,7 @@ print("Órdenes en servicio incompatible:", fuera)
 
 print()
 
-# --- Post-baja: garantizada por construcción (descarte en el loop de fallas);
-#     comprobación indirecta: los equipos de Baja no deben concentrar órdenes hasta el corte ---
+#equipos de Baja no deben concentrar órdenes hasta el corte
 baja = chk[chk["equipo_id"].isin(dim_equipo[dim_equipo["estado_actual"] == "Baja"]["equipo_id"])]
 print("Última orden de equipos de Baja:", baja["fecha_solicitud"].max())
 
