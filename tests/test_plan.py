@@ -15,11 +15,13 @@ def test_ninguna_planificada_antes_de_adquisicion(tablas):
     violaciones = (
         pd.to_datetime(m["fecha_planificada"]) < pd.to_datetime(m["fecha_adquisicion"])
     ).sum()
-    assert violaciones == 0      
+    assert violaciones == 0
 
 
 def test_unicidad_equipo_fecha_tipo(tablas):
-    dup = tablas["fact_plan"].duplicated(
-        subset=["equipo_id", "fecha_planificada", "tipo_mantenimiento_id"]
-    ).sum()
-    assert dup == 0              
+    dup = (
+        tablas["fact_plan"]
+        .duplicated(subset=["equipo_id", "fecha_planificada", "tipo_mantenimiento_id"])
+        .sum()
+    )
+    assert dup == 0

@@ -12,20 +12,24 @@ def test_cadena_inicio_cierre(tablas):
     fo = tablas["fact_ordenes"].dropna(subset=["fecha_cierre"])
     assert (fo["fecha_inicio"] <= fo["fecha_cierre"]).all()
 
+
 def test_ninguna_orden_despues_del_corte(tablas):
     m = tablas["fact_ordenes"]
     violaciones = (
         pd.to_datetime(m["fecha_solicitud"]) > pd.to_datetime(config.FECHA_CORTE)
     ).sum()
-    assert violaciones == 0    
+    assert violaciones == 0
 
 
-@pytest.mark.parametrize("fk, dim", [
-    ("equipo_id", "dim_equipo"),
-    ("ubicacion_id", "dim_ubicacion"),
-    ("tecnico_id", "dim_tecnico"),
-    ("tipo_mantenimiento_id", "dim_tipo_mantenimiento"),
-])
+@pytest.mark.parametrize(
+    "fk, dim",
+    [
+        ("equipo_id", "dim_equipo"),
+        ("ubicacion_id", "dim_ubicacion"),
+        ("tecnico_id", "dim_tecnico"),
+        ("tipo_mantenimiento_id", "dim_tipo_mantenimiento"),
+    ],
+)
 def test_integridad_referencial(tablas, fk, dim):
     huerfanas = ~tablas["fact_ordenes"][fk].isin(tablas[dim][fk])
     assert huerfanas.sum() == 0, f"{huerfanas.sum()} órdenes con {fk} inexistente"
@@ -37,9 +41,13 @@ def test_tecnico_coherente_con_especialidad(tablas):
     tec = tablas["dim_tecnico"]
     chk = m.merge(eq[["equipo_id", "nombre_equipo", "clase_funcional"]], on="equipo_id")
     chk = chk.merge(tec[["tecnico_id", "especialidad"]], on="tecnico_id")
-    chk["esp_esperada"] = [catalog.ESPECIALIDAD_POR_CLASE[c] for c in chk["clase_funcional"]]
+    chk["esp_esperada"] = [
+        catalog.ESPECIALIDAD_POR_CLASE[c] for c in chk["clase_funcional"]
+    ]
     fuera_de_especialidad = (chk["especialidad"] != chk["esp_esperada"]).sum()
-    assert fuera_de_especialidad == 0, f"{fuera_de_especialidad} órdenes con técnico fuera de especialidad"
+    assert fuera_de_especialidad == 0, (
+        f"{fuera_de_especialidad} órdenes con técnico fuera de especialidad"
+    )
 
 
 def test_ubicacion_compatible_con_clase(tablas):
@@ -56,5 +64,11 @@ def test_ubicacion_compatible_con_clase(tablas):
 
 
 def test_correctiva_cuesta_mas_que_preventiva(tablas):
-    medianas = tablas["fact_ordenes"].groupby("tipo_mantenimiento_id")["costo_repuestos"].median()
-    assert medianas[2] > medianas[1], f"correctiva {medianas[2]} vs preventiva {medianas[1]}"
+    medianas = (
+        tablas["fact_ordenes"]
+        .groupby("tipo_mantenimiento_id")["costo_repuestos"]
+        .median()
+    )
+    assert medianas[2] > medianas[1], (
+        f"correctiva {medianas[2]} vs preventiva {medianas[1]}"
+    )
