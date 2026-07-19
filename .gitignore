@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+# power bi
+*.pbix.tmp
+.pbi/localSettings

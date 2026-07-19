@@ -107,5 +107,8 @@ Granularidad: una fila = un equipo + un mes con mantención planificada de un ti
 Limitaciones:
 En estado_actual de dim_equipo se escoge SCD Tipo 1, es decir se deja el estado presente y no se tiene en cuenta el histórico.
 En dim_ubicación, será la ubicación de la última orden.
-Las columnas fecha_inicio y fecha_cierre tendrán relaciones inactivas hacia dim_fecha
+Las columnas fecha_inicio y fecha_cierre tienen relaciones inactivas hacia dim_fecha
 Unicidad por combinación en fact_plan_mantenimiento (equipo_id + fecha_planificada + tipo_mantenimiento_id)
+dim_fecha se crea en Power BI con CALENDAR
+El dataset se congela por diseño , es_futuro hardcodea el corte 2026-06-30
+No se incluyen feriados
