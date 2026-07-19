@@ -114,4 +114,5 @@ Power BI:
 dim_fecha se crea con CALENDAR
 El dataset se congela por diseño , es_futuro hardcodea el corte 2026-06-30
 No se incluyen feriados
-MTTR mide tiempo promedio de reparación, se mide desde fecha_inicio a fehca_cierre, tomando en cuenta solo correctivas y órdenes cerradas. Se mide en días.
+MTTR mide tiempo promedio de reparación, se mide desde fecha_inicio a fecha_cierre, tomando en cuenta solo correctivas y órdenes cerradas (se excluyen abiertas). Se mide en días.
+MTBF mide tiempo entre fallas, se toma en cuenta la fecha de adquisición para evitar una inflación de la métrica (Al medir 2000 equipos con una fecha de inicio igual), se testeo donde al aplicar por fecha de adquisición se reduce un 12% la inflación de la medida. Sin embargo sigue limitado por los equipos que están en Baja (son 34) ya que por simplificación no se incluye una fecha de baja
