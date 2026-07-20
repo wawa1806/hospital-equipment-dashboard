@@ -115,4 +115,17 @@ dim_fecha se crea con CALENDAR
 El dataset se congela por diseño , es_futuro hardcodea el corte 2026-06-30
 No se incluyen feriados
 MTTR mide tiempo promedio de reparación, se mide desde fecha_inicio a fecha_cierre, tomando en cuenta solo correctivas y órdenes cerradas (se excluyen abiertas). Se mide en días.
-MTBF mide tiempo entre fallas, se toma en cuenta la fecha de adquisición para evitar una inflación de la métrica (Al medir 2000 equipos con una fecha de inicio igual), se testeo donde al aplicar por fecha de adquisición se reduce un 12% la inflación de la medida. Sin embargo sigue limitado por los equipos que están en Baja (son 34) ya que por simplificación no se incluye una fecha de baja
+MTBF mide tiempo operativo total entre fallas, se toma en cuenta la fecha de adquisición para evitar una inflación de la métrica (Al medir 2000 equipos con una fecha de inicio igual), la versión naive sobreestimaba el tiempo operativo en 12%, el numerador refinado por fecha_adquisicion elimina esa sobreestimación. Sin embargo sigue limitado por los equipos que están en Baja (son 34) ya que no se incluye una fecha de baja.
+
+Un plan se considera cumplido si existe al menos una orden preventiva del mismo equipo con fecha de inicio dentro de la fecha planificada con más o menos 7 días de tolerancia.
+Por lo que el % Cumplimiento Plan = Planes Cumplidos / Planes Evaluables
+
+Se considera:
+Tolerancia/holgura de +- 7 días
+La fecha_inicio es cuando se ejecuta la mantención
+plan evaluable se refiere a planes cuya ventana completa se cierra antes del corte
+Solo órdenes preventivas
+
+% Correctivas Bajo Garantía informa sobre la cantidad de equipos que cuya fecha de solicitud esta antes del vencimiento de la garantía sobre el total de las órdenes correctivas
+
+Disponibilidad informa sobre el % de disponibildad bruta de los equipos, midiendo la diferencia entre el total y el tiempo de detención. 
