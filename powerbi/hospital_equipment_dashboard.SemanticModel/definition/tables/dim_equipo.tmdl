@@ -1,0 +1,199 @@
+table dim_equipo
+	lineageTag: 3e0c876f-a7dd-42bf-be15-a1867debb2a4
+
+	column equipo_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 03aaee46-763a-40f9-83d0-32f349f2ddc6
+		summarizeBy: none
+		sourceColumn: equipo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_inventario
+		dataType: string
+		lineageTag: a13154b0-47af-4d7f-8685-0d7e5ed5b04f
+		summarizeBy: none
+		sourceColumn: codigo_inventario
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_serie
+		dataType: string
+		lineageTag: 5bfd90dc-3250-47b5-b3a9-5fce947f6bce
+		summarizeBy: none
+		sourceColumn: numero_serie
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_equipo
+		dataType: string
+		lineageTag: 4be4e7f7-c24b-4e02-a1f1-839bfed30ecf
+		summarizeBy: none
+		sourceColumn: nombre_equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column clase_funcional
+		dataType: string
+		lineageTag: 1b26a40c-ce05-4d86-a772-598c50dab4a8
+		summarizeBy: none
+		sourceColumn: clase_funcional
+
+		annotation SummarizationSetBy = Automatic
+
+	column marca
+		dataType: string
+		lineageTag: b886ec74-dc93-45d5-ad3e-392744c36c8e
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	column modelo
+		dataType: string
+		lineageTag: 6c73896c-5208-4af5-a9f3-0708b2a89207
+		summarizeBy: none
+		sourceColumn: modelo
+
+		annotation SummarizationSetBy = Automatic
+
+	column clase_riesgo
+		dataType: string
+		lineageTag: 11133158-cca3-4815-abda-5859238ba2cf
+		summarizeBy: none
+		sourceColumn: clase_riesgo
+
+		annotation SummarizationSetBy = Automatic
+
+	column criticidad
+		dataType: string
+		lineageTag: 37a6b160-dba9-40c2-853f-c95a131bec7c
+		summarizeBy: none
+		sourceColumn: criticidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_adquisicion
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 80acd105-e64e-4704-9a67-4238fc2ef901
+		summarizeBy: none
+		sourceColumn: fecha_adquisicion
+
+		variation Variación
+			isDefault
+			relationship: 2ad0b987-afd2-4481-a23b-b3567f7486b6
+			defaultHierarchy: LocalDateTable_19f666b1-64a9-42dc-bb55-f27fd7b9656e.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column costo_adquisicion
+		dataType: decimal
+		formatString: \$#,0;\$-#,0;\$#,0
+		lineageTag: 8ef77b5d-86fe-4e6f-a272-9142934f4e6f
+		summarizeBy: sum
+		sourceColumn: costo_adquisicion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CL"}
+
+	column vida_util_anios
+		dataType: int64
+		formatString: 0
+		lineageTag: 444b4c89-a5a1-478a-a70f-f2caac60b427
+		summarizeBy: sum
+		sourceColumn: vida_util_anios
+
+		annotation SummarizationSetBy = Automatic
+
+	column modalidad_propiedad
+		dataType: string
+		lineageTag: c5a5bb32-50cc-4532-a98f-bbd8f27f3c35
+		summarizeBy: none
+		sourceColumn: modalidad_propiedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_vencimiento_garantia
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e762591e-09fb-42f2-8d40-cb4ddf40bf0c
+		summarizeBy: none
+		sourceColumn: fecha_vencimiento_garantia
+
+		variation Variación
+			isDefault
+			relationship: f8a220cf-76ba-4214-b73d-cb05804d345b
+			defaultHierarchy: LocalDateTable_f35be27d-48a3-40ae-9285-d26092eb4d58.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column bajo_plan_mantenimiento
+		dataType: string
+		lineageTag: 1cd227b3-8e56-4e2b-b495-3bad529dbea5
+		summarizeBy: none
+		sourceColumn: bajo_plan_mantenimiento
+
+		annotation SummarizationSetBy = Automatic
+
+	column estrategia_mantenimiento
+		dataType: string
+		lineageTag: 4401cc86-69df-468a-ba69-92e9c8e78e77
+		summarizeBy: none
+		sourceColumn: estrategia_mantenimiento
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_actual
+		dataType: string
+		lineageTag: 38f23ac2-276b-419a-979a-d0678045b9a6
+		summarizeBy: none
+		sourceColumn: estado_actual
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_garantia =
+			
+			VAR Corte = MAXX(FILTER(dim_fecha, dim_fecha[es_futuro] = FALSE), dim_fecha[Date])
+			VAR SeisMeses = EDATE(Corte, 6)
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(dim_equipo[fecha_vencimiento_garantia]), "Sin dato",
+			    dim_equipo[fecha_vencimiento_garantia] < Corte, "Vencida",
+			    dim_equipo[fecha_vencimiento_garantia] < SeisMeses, "Por vencer",
+			    "Vigente"
+			)
+		lineageTag: 221c16d9-e561-4734-852f-b55b303a5048
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_equipo = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(
+				        File.Contents(RutaDatos & "dim_equipo.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(Encabezados, {{"equipo_id", Int64.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional1" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional", {{"fecha_adquisicion", type date}}, "en-US"),
+				    #"Tipo cambiado con configuración regional2" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional1", {{"costo_adquisicion", Currency.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional3" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional2", {{"vida_util_anios", Int64.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional4" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional3", {{"fecha_vencimiento_garantia", type date}}, "en-US"),
+				    #"Tipo cambiado con configuración regional5" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional4", {{"fecha_adquisicion", type date}}, "en-US")
+				in
+				    #"Tipo cambiado con configuración regional5"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

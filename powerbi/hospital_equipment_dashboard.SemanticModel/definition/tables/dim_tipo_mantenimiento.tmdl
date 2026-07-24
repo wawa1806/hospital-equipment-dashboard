@@ -1,0 +1,37 @@
+table dim_tipo_mantenimiento
+	lineageTag: 0bcef167-3575-416a-9587-cd12867327b2
+
+	column tipo_mantenimiento_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b8443b8-70f2-46e7-ad54-0200e68c34c5
+		summarizeBy: none
+		sourceColumn: tipo_mantenimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_tipo
+		dataType: string
+		lineageTag: 98ac7962-599b-4068-aa9f-93f8206d17e6
+		summarizeBy: none
+		sourceColumn: nombre_tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_tipo_mantenimiento = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(
+				        File.Contents(RutaDatos & "dim_tipo_mantenimiento.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(Encabezados, {{"tipo_mantenimiento_id", Int64.Type}}, "en-US")
+				in
+				    #"Tipo cambiado con configuración regional"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

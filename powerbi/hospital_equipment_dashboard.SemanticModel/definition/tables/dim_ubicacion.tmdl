@@ -1,0 +1,55 @@
+table dim_ubicacion
+	lineageTag: a4659990-f8d1-47ae-be00-c5362301479a
+
+	column ubicacion_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 32a985d6-f187-47a9-bb08-a58e531121c7
+		summarizeBy: none
+		sourceColumn: ubicacion_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicio_clinico
+		dataType: string
+		lineageTag: 5d3cc775-cf00-4598-aa7d-a239430d3224
+		summarizeBy: none
+		sourceColumn: servicio_clinico
+
+		annotation SummarizationSetBy = Automatic
+
+	column piso
+		dataType: int64
+		formatString: 0
+		lineageTag: dfe95c9b-ffd0-4be1-80c3-9e7613ff3a8b
+		summarizeBy: none
+		sourceColumn: piso
+
+		annotation SummarizationSetBy = Automatic
+
+	column edificio
+		dataType: string
+		lineageTag: 06bfab86-b30f-4c67-b370-32b0e2faaaea
+		summarizeBy: none
+		sourceColumn: edificio
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_ubicacion = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(
+				        File.Contents(RutaDatos & "dim_ubicacion.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(Encabezados, {{"ubicacion_id", Int64.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional1" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional", {{"piso", Int64.Type}}, "en-US")
+				in
+				    #"Tipo cambiado con configuración regional1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

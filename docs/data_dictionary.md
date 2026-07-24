@@ -117,15 +117,23 @@ No se incluyen feriados
 MTTR mide tiempo promedio de reparación, se mide desde fecha_inicio a fecha_cierre, tomando en cuenta solo correctivas y órdenes cerradas (se excluyen abiertas). Se mide en días.
 MTBF mide tiempo operativo total entre fallas, se toma en cuenta la fecha de adquisición para evitar una inflación de la métrica (Al medir 2000 equipos con una fecha de inicio igual), la versión naive sobreestimaba el tiempo operativo en 12%, el numerador refinado por fecha_adquisicion elimina esa sobreestimación. Sin embargo sigue limitado por los equipos que están en Baja (son 34) ya que no se incluye una fecha de baja.
 
-Un plan se considera cumplido si existe al menos una orden preventiva del mismo equipo con fecha de inicio dentro de la fecha planificada con más o menos 7 días de tolerancia.
-Por lo que el % Cumplimiento Plan = Planes Cumplidos / Planes Evaluables
+### % Cumplimiento del Plan
+
+Un plan se considera cumplido si existe al menos una orden preventiva del mismo 
+equipo con `fecha_inicio` dentro de la ventana [fecha_planificada ± 7 días].
+
+% Cumplimiento Plan = Planes Cumplidos / Planes Evaluables
 
 Se considera:
-Tolerancia/holgura de +- 7 días
-La fecha_inicio es cuando se ejecuta la mantención
-plan evaluable se refiere a planes cuya ventana completa se cierra antes del corte
-Solo órdenes preventivas
+- Tolerancia de +-7 días modela la holgura de agendamiento (un plan puede ejecutarse algunos días antes o después de lo previsto por disponibilidad de pabellón o técnico), no la duración del trabajo. El gap mínimo entre mantenciones consecutivas de un mismo equipo es de 94 días, muy superior a la ventana de 14 días, por lo que +-7 nunca genera correspondencias ambiguas (una orden no puede satisfacer dos planes). La tolerancia se define como variables en las medidas DAX.
+- fecha_inicio representa el momento en que la mantención efectivamente se realiza.
+- Evaluabilidad; un plan es evaluable solo si su ventana completa cierra antes del corte (fecha_planificada + 7 <= 2026-06-30). Un plan cuya ventana sigue abierta no puede declararse incumplido: su oportunidad de ejecución no ha terminado.
+- No se divide por el total ya que produce un 38,6% engañoso en 2026, al contar como "no cumplidos" planes que simplemente aún no vencen. 
+- Órdenes preventivas cumplen planes.
 
-% Correctivas Bajo Garantía informa sobre la cantidad de equipos que cuya fecha de solicitud esta antes del vencimiento de la garantía sobre el total de las órdenes correctivas
+### % Correctivas Bajo Garantía
+Proporción de órdenes correctivas cuya `fecha_solicitud` es anterior al vencimiento de garantía del equipo, sobre el total de correctivas. Se usa fecha_solicitud porque  la garantía cubre el momento en que ocurre la falla. Los equipos sin fecha de garantía registrada se tratan como no cubiertos.
 
-Disponibilidad informa sobre el % de disponibildad bruta de los equipos, midiendo la diferencia entre el total y el tiempo de detención. 
+### Disponibilidad
+Disponibilidad bruta: 1 − (horas de detención / horas operativas de flota). Toda detención cuenta, sea preventiva o correctiva. Las órdenes abiertas (detención en curso, sin 
+horas registradas) quedan fuera del numerador.

@@ -1,0 +1,126 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 309.56311644915581,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1172.9519866843459,
+            "y": 361.6429575066299
+          },
+          "nodeIndex": "dim_equipo",
+          "nodeLineageTag": "3e0c876f-a7dd-42bf-be15-a1867debb2a4",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 47.937555345977046,
+            "y": 0
+          },
+          "nodeIndex": "dim_tecnico",
+          "nodeLineageTag": "0246a7a2-ff4b-49f8-a57b-cb3937447c7d",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 495.1825436265899,
+            "y": 671.27827004012352
+          },
+          "nodeIndex": "dim_tipo_mantenimiento",
+          "nodeLineageTag": "0bcef167-3575-416a-9587-cd12867327b2",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 21.558179326062088,
+            "y": 388.14346383937442
+          },
+          "nodeIndex": "dim_ubicacion",
+          "nodeLineageTag": "a4659990-f8d1-47ae-be00-c5362301479a",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 496.97840469488062,
+            "y": 135.13573043963081
+          },
+          "nodeIndex": "fact_ordenes_trabajo",
+          "nodeLineageTag": "b801b423-396e-4116-9755-5aad6bde3212",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 902.60966026764766,
+            "y": 625.35337259279845
+          },
+          "nodeIndex": "fact_plan_mantenimiento",
+          "nodeLineageTag": "2f53f9db-641f-4d28-b5b9-43226882698a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 915.540529484641,
+            "y": 0
+          },
+          "nodeIndex": "dim_fecha",
+          "nodeLineageTag": "1daae846-6235-4a91-bff5-8e89128d35ec",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1435.3938073582838,
+            "y": 347.63913502006176
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "7747e79a-6c5d-4a27-888c-391d7087b189",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 44.905697313104007,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

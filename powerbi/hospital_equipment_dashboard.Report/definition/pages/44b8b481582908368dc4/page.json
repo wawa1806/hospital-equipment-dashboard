@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "44b8b481582908368dc4",
+  "displayName": "Detalle Clase Funcional",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0b4f83c381eda04124e9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_equipo"
+              }
+            },
+            "Property": "clase_funcional"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_equipo",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "clase_funcional"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Imagenología'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "ddb59cd33e00313a75a5",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "826b2f0808823d9053ad",
+        "boundFilter": "0b4f83c381eda04124e9",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_equipo"
+              }
+            },
+            "Property": "clase_funcional"
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "50e4aaddd4e5cd20aad6",
+      "target": "4399cc0d75a438e37332",
+      "type": "NoFilter"
+    }
+  ]
+}

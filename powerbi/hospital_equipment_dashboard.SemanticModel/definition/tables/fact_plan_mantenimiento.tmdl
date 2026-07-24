@@ -1,0 +1,51 @@
+table fact_plan_mantenimiento
+	lineageTag: 2f53f9db-641f-4d28-b5b9-43226882698a
+
+	column equipo_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ccc53da3-bba0-4e37-81b4-d7cbb9d81a00
+		summarizeBy: none
+		sourceColumn: equipo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_planificada
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 45bf2f46-2ece-4c71-8b42-29acedb5a588
+		summarizeBy: none
+		sourceColumn: fecha_planificada
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column tipo_mantenimiento_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 14242fcb-fd50-42a0-a0a6-08b58d8a591a
+		summarizeBy: none
+		sourceColumn: tipo_mantenimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_plan_mantenimiento = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(
+				        File.Contents(RutaDatos & "fact_plan.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(Encabezados, {{"equipo_id", Int64.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional1" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional", {{"fecha_planificada", type date}}, "en-US"),
+				    #"Tipo cambiado con configuración regional2" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional1", {{"tipo_mantenimiento_id", Int64.Type}}, "en-US")
+				in
+				    #"Tipo cambiado con configuración regional2"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

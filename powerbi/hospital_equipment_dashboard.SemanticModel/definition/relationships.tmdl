@@ -1,0 +1,52 @@
+relationship 2ad0b987-afd2-4481-a23b-b3567f7486b6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_equipo.fecha_adquisicion
+	toColumn: LocalDateTable_19f666b1-64a9-42dc-bb55-f27fd7b9656e.Date
+
+relationship f8a220cf-76ba-4214-b73d-cb05804d345b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_equipo.fecha_vencimiento_garantia
+	toColumn: LocalDateTable_f35be27d-48a3-40ae-9285-d26092eb4d58.Date
+
+relationship 4bd0a20f-b5ff-3e90-4430-36c65a9f99fc
+	fromColumn: fact_ordenes_trabajo.equipo_id
+	toColumn: dim_equipo.equipo_id
+
+relationship 089de64b-3b1f-15b0-6df2-fce6f842bcda
+	fromColumn: fact_ordenes_trabajo.ubicacion_id
+	toColumn: dim_ubicacion.ubicacion_id
+
+relationship 19345ff5-92d4-9fd5-fd1a-e1998350effe
+	fromColumn: fact_ordenes_trabajo.tecnico_id
+	toColumn: dim_tecnico.tecnico_id
+
+relationship 2bb17009-728b-2fbd-a864-0e5626f32a41
+	fromColumn: fact_ordenes_trabajo.tipo_mantenimiento_id
+	toColumn: dim_tipo_mantenimiento.tipo_mantenimiento_id
+
+relationship 3d2cc41c-3b1d-9388-86f1-ccd4c5e8fa03
+	fromColumn: fact_ordenes_trabajo.fecha_solicitud
+	toColumn: dim_fecha.Date
+
+relationship 32385081-5e20-0360-7cc0-cd0d69d73b83
+	isActive: false
+	fromColumn: fact_ordenes_trabajo.fecha_inicio
+	toColumn: dim_fecha.Date
+
+relationship d025eebc-43e0-bc35-455a-8d44810084c9
+	isActive: false
+	fromColumn: fact_ordenes_trabajo.fecha_cierre
+	toColumn: dim_fecha.Date
+
+relationship b4251cf6-68b4-57c5-0832-b90a3b1c18f5
+	fromColumn: fact_plan_mantenimiento.equipo_id
+	toColumn: dim_equipo.equipo_id
+
+relationship b38deed2-65df-6269-2c08-dfb8a7fa3b26
+	fromColumn: fact_plan_mantenimiento.tipo_mantenimiento_id
+	toColumn: dim_tipo_mantenimiento.tipo_mantenimiento_id
+
+relationship 51d45dc5-2506-d579-6202-5baeee768e54
+	fromColumn: fact_plan_mantenimiento.fecha_planificada
+	toColumn: dim_fecha.Date
+

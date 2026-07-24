@@ -1,0 +1,6845 @@
+cultureInfo es-ES
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_equipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim equipo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_equipo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.equipo_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "equipo_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "equipo id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "equipo_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "equipo identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "equipo identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "equipo identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "equipo credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.codigo_inventario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "codigo_inventario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "codigo inventario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "codigo_inventario": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.numero_serie": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "numero_serie"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero serie": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero_serie": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.nombre_equipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "nombre_equipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre equipo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nombre_equipo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Nombre": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.clase_funcional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "clase_funcional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clase funcional": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clase_funcional": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.marca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "marca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "marca": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.modelo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "modelo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "modelo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.clase_riesgo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "clase_riesgo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clase riesgo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clase_riesgo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.criticidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "criticidad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "criticidad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_adquisicion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "fecha_adquisicion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha adquisicion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_adquisicion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_equipo.fecha_adquisicion.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_adquisicion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_adquisicion.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_adquisicion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha adquisicion año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_adquisicion.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_adquisicion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha adquisicion trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_adquisicion.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_adquisicion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha adquisicion me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_adquisicion.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_adquisicion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha adquisicion día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.costo_adquisicion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "costo_adquisicion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo adquisicion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "costo_adquisicion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.vida_util_anio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "vida_util_anios"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vida util anio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vida_util_anios": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.modalidad_propiedad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "modalidad_propiedad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "modalidad propiedad": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "modalidad_propiedad": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_vencimiento_garantia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "fecha_vencimiento_garantia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha vencimiento garantia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_vencimiento_garantia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_vencimiento_garantia",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_vencimiento_garantia.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_vencimiento_garantia",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha vencimiento garantia año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_vencimiento_garantia.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_vencimiento_garantia",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha vencimiento garantia trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_vencimiento_garantia.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_vencimiento_garantia",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha vencimiento garantia me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.fecha_vencimiento_garantia.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "VariationSource": "fecha_vencimiento_garantia",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha vencimiento garantia día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.bajo_plan_mantenimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "bajo_plan_mantenimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bajo plan mantenimiento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "bajo_plan_mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "bajo proposal mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "bajo strategy mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "bajo agenda mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "bajo arrangement mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "bajo idea mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "bajo layout mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "bajo policy mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "bajo preparation mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "bajo blueprint mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "bajo initiative mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.estrategia_mantenimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "estrategia_mantenimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estrategia mantenimiento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estrategia_mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.estado_actual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "estado_actual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado actual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estado_actual": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "estado real": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "estado existent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "estado tangible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tecnico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tecnico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim tecnico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_tecnico": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tecnico.tecnico_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tecnico",
+			          "ConceptualProperty": "tecnico_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tecnico id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tecnico_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "tecnico identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "tecnico identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "tecnico identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "tecnico credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tecnico.nombre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tecnico",
+			          "ConceptualProperty": "nombre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tecnico.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tecnico",
+			          "ConceptualProperty": "tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tecnico.especialidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tecnico",
+			          "ConceptualProperty": "especialidad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "especialidad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tipo_mantenimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tipo_mantenimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim tipo mantenimiento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_tipo_mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tipo_mantenimiento.tipo_mantenimiento_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tipo_mantenimiento",
+			          "ConceptualProperty": "tipo_mantenimiento_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo mantenimiento id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_mantenimiento_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "tipo mantenimiento identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tipo mantenimiento identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tipo mantenimiento identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tipo mantenimiento credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tipo_mantenimiento.nombre_tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tipo_mantenimiento",
+			          "ConceptualProperty": "nombre_tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre tipo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nombre_tipo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ubicacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ubicacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim ubicacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_ubicacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ubicacion.ubicacion_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ubicacion",
+			          "ConceptualProperty": "ubicacion_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ubicacion id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ubicacion_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ubicacion identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ubicacion identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ubicacion identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ubicacion credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ubicacion.servicio_clinico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ubicacion",
+			          "ConceptualProperty": "servicio_clinico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "servicio clinico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "servicio_clinico": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ubicacion.piso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ubicacion",
+			          "ConceptualProperty": "piso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "piso": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ubicacion.edificio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ubicacion",
+			          "ConceptualProperty": "edificio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "edificio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact ordenes trabajo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fact ordene trabajo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "fact_ordenes_trabajo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo.orden_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "orden_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "orden id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "orden_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "orden identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "orden identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "orden identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "orden credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo.equipo_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "equipo_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "equipo id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "equipo_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "equipo identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "equipo identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "equipo identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "equipo credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo.ubicacion_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "ubicacion_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ubicacion id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ubicacion_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ubicacion identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ubicacion identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ubicacion identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ubicacion credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo.tecnico_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "tecnico_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "tecnico id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tecnico_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "tecnico identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "tecnico identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "tecnico identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "tecnico credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo.tipo_mantenimiento_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "tipo_mantenimiento_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "tipo mantenimiento id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_mantenimiento_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "tipo mantenimiento identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tipo mantenimiento identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tipo mantenimiento identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tipo mantenimiento credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo.fecha_solicitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "fecha_solicitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha solicitud": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_solicitud": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_ordenes_trabajo.fecha_inicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "fecha_inicio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha inicio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_inicio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_ordenes_trabajo.fecha_cierre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "fecha_cierre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha cierre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_cierre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_ordenes_trabajo.costo_repuesto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "costo_repuestos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo repuesto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "costo_repuestos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo.costo_mano_obra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "costo_mano_obra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo mano obra": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "costo_mano_obra": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo.horas_detencion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "horas_detencion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas detencion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora detencion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "horas_detencion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo.falla_reportada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes_trabajo",
+			          "ConceptualProperty": "falla_reportada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "falla reportada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "falla_reportada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_plan_mantenimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact plan mantenimiento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fact_plan_mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "fact proposal mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact strategy mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact agenda mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact arrangement mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact idea mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact layout mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact policy mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact preparation mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact blueprint mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "fact initiative mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento.equipo_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_plan_mantenimiento",
+			          "ConceptualProperty": "equipo_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "equipo id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "equipo_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "equipo identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "equipo identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "equipo identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "equipo credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento.fecha_planificada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_plan_mantenimiento",
+			          "ConceptualProperty": "fecha_planificada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha planificada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_planificada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_plan_mantenimiento.tipo_mantenimiento_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_plan_mantenimiento",
+			          "ConceptualProperty": "tipo_mantenimiento_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "tipo mantenimiento id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_mantenimiento_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "tipo mantenimiento identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tipo mantenimiento identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tipo mantenimiento identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tipo mantenimiento credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_fecha": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_fecha.mes_nombre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "mes_nombre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes nombre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me nombre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_nombre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.mes_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "mes_num"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "me number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.anio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "anio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.anio_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "anio_mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anio me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "anio_mes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.dia_semana_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "dia_semana_num"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dia_semana_num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dia semana number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.dia_semana_nombre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "dia_semana_nombre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana nombre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dia_semana_nombre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.es_fin_de_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "es_fin_de_semana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "es fin de semana": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "es_fin_de_semana": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.es_futuro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "es_futuro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "es futuro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "es_futuro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.total_órdenes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Total Órdenes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total órdenes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate órdene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall órdene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.costo_repuestos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Costo Repuestos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo repuestos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.costo_mano_obra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Costo Mano Obra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo mano obra": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.costo_total_mantenimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Costo Total Mantenimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo total mantenimiento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "costo aggregate mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "costo overall mantenimiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Costo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.órdenes_correctivas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Órdenes Correctivas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "órdenes correctivas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.órdenes_preventivas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Órdenes Preventivas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "órdenes preventivas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.órdenes_abiertas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Órdenes Abiertas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "órdenes abiertas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.órdenes_correctivas_cerradas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Órdenes Correctivas Cerradas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "órdenes correctivas cerradas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.MTTR_días": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "MTTR (días)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "MTTR (días)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MTTR": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.equipos_en_contexto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Equipos en Contexto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "equipos en contexto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.MTBF_días": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "MTBF (días)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "MTBF (días)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MTBF": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.días_operativos_flota": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Días Operativos Flota"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "días operativos flota": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.planes_cumplidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Planes Cumplidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "planes cumplidos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.planes_evaluables": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Planes Evaluables"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "planes evaluables": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.planes_totales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Planes Totales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "planes totales": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.planes_no_evaluables": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Planes No Evaluables"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "planes no evaluables": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "plane number evaluable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.cumplimiento_plan": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Cumplimiento Plan"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% cumplimiento plan": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% cumplimiento proposal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "% cumplimiento strategy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "% cumplimiento agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "% cumplimiento arrangement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "% cumplimiento idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "% cumplimiento layout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "% cumplimiento policy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "% cumplimiento preparation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "% cumplimiento blueprint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "% cumplimiento initiative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.correctivas_bajo_garantía": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Correctivas Bajo Garantía"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "correctivas bajo garantía": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.correctivas_bajo_garantía1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Correctivas Bajo Garantía"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% correctivas bajo garantía": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage correctiva bajo garantía": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct correctiva bajo garantía": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.disponibilidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Disponibilidad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "disponibilidad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.avance_plan_anual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Avance Plan Anual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% avance plan anual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage avance plan anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "% avance proposal anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "% avance strategy anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "% avance agenda anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "% avance arrangement anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "% avance idea anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "% avance layout anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "% avance policy anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "% avance preparation anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct avance plan anual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "Actual": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.planes_ejecutados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Planes Ejecutados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "planes ejecutados": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.antigüedad_promedio_backlog_días": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Antigüedad Promedio Backlog (Días)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "antigüedad promedio backlog (días)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "antigüedad promedio backlog": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_equipo.estado_garantia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_equipo",
+			          "ConceptualProperty": "estado_garantia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado garantia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estado_garantia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.costo_promedio_por_orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Costo Promedio por Orden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo promedio por orden": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.equipos_garantía_por_vencer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Equipos Garantía por Vencer"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "equipos garantía por vencer": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.órdenes_año_actual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Órdenes Año Actual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "órdenes año actual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "órdene año real": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "órdene año existent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "órdene año tangible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.órdenes_año_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Órdenes Año Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "órdenes año anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.avance_esperado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Avance Esperado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% avance esperado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage avance esperado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct avance esperado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Esperado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "dim_equipo_fecha_vencimiento_garantia_jerarquía_de_fecha_has_dim_equipo_fecha_vencimiento_garantia_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			          }
+			        },
+			        "dim_equipo.fecha_vencimiento_garantia.me": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_vencimiento_garantia_jerarquía_de_fecha_has_dim_equipo_fecha_vencimiento_garantia_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			          }
+			        },
+			        "dim_equipo.fecha_vencimiento_garantia.trimestre": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_vencimiento_garantia_jerarquía_de_fecha_has_dim_equipo_fecha_vencimiento_garantia_año": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			          }
+			        },
+			        "dim_equipo.fecha_vencimiento_garantia.año": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_vencimiento_garantia_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_vencimiento_garantia": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia"
+			          }
+			        },
+			        "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_vencimiento_garantias_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_adquisicion_me_has_dim_equipo_fecha_adquisicion_día": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_adquisicion.me": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.me"
+			          }
+			        },
+			        "dim_equipo.fecha_adquisicion.día": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.me"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.día"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_adquisicion_trimestre_has_dim_equipo_fecha_adquisicion_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_adquisicion.trimestre": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.trimestre"
+			          }
+			        },
+			        "dim_equipo.fecha_adquisicion.me": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.me"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_adquisicion_año_has_dim_equipo_fecha_adquisicion_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_adquisicion.año": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.año"
+			          }
+			        },
+			        "dim_equipo.fecha_adquisicion.trimestre": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.año"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_adquisicion_jerarquía_de_fecha_has_dim_equipo_fecha_adquisicion_día": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_adquisicion.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			          }
+			        },
+			        "dim_equipo.fecha_adquisicion.día": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_adquisicion_jerarquía_de_fecha_has_dim_equipo_fecha_adquisicion_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_adquisicion.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			          }
+			        },
+			        "dim_equipo.fecha_adquisicion.me": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me1"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_adquisicion_jerarquía_de_fecha_has_dim_equipo_fecha_adquisicion_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_adquisicion.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			          }
+			        },
+			        "dim_equipo.fecha_adquisicion.trimestre": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_adquisicion_jerarquía_de_fecha_has_dim_equipo_fecha_adquisicion_año": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_adquisicion.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			          }
+			        },
+			        "dim_equipo.fecha_adquisicion.año": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años1"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_adquisicion_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_adquisicion": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion"
+			          }
+			        },
+			        "dim_equipo.fecha_adquisicion.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_adquisicion"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_adquisicions_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_dim_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have_dim_fechas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_plan_mantenimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_fact_plan_mantenimientos"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_dim_tipo_mantenimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "dim_tipo_mantenimiento": {
+			          "Target": {
+			            "Entity": "dim_tipo_mantenimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "dim_tipo_mantenimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have_dim_tipo_mantenimientos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tipo_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "fact_plan_mantenimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tipo_mantenimientos_have_fact_plan_mantenimientos"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_dim_equipo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have_dim_equipos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "fact_plan_mantenimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_fact_plan_mantenimientos"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_dim_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_dim_fechas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_fact_ordenes_trabajos"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_dim_tipo_mantenimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "dim_tipo_mantenimiento": {
+			          "Target": {
+			            "Entity": "dim_tipo_mantenimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "dim_tipo_mantenimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_dim_tipo_mantenimientos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tipo_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tipo_mantenimientos_have_fact_ordenes_trabajos"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_dim_tecnico": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "dim_tecnico": {
+			          "Target": {
+			            "Entity": "dim_tecnico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "dim_tecnico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_dim_tecnicos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tecnico"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tecnicos_have_fact_ordenes_trabajos"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_dim_ubicacion": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "dim_ubicacion": {
+			          "Target": {
+			            "Entity": "dim_ubicacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "dim_ubicacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_dim_ubicacions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ubicacion"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ubicacions_have_fact_ordenes_trabajos"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_dim_equipo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_dim_equipos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_fact_ordenes_trabajos"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_entity__medida_avance_esperado": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "entity__medida.avance_esperado": {
+			          "Target": {
+			            "Entity": "entity__medida.avance_esperado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.avance_esperado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have__avance_esperado"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_órdenes_año_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.órdenes_año_anterior": {
+			          "Target": {
+			            "Entity": "entity__medida.órdenes_año_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.órdenes_año_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_órdenes_año_anterior"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_órdenes_año_actual": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.órdenes_año_actual": {
+			          "Target": {
+			            "Entity": "entity__medida.órdenes_año_actual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.órdenes_año_actual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_órdenes_año_actual"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_entity__medida_equipos_garantía_por_vencer": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "entity__medida.equipos_garantía_por_vencer": {
+			          "Target": {
+			            "Entity": "entity__medida.equipos_garantía_por_vencer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.equipos_garantía_por_vencer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_equipos_garantía_por_vencer"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_costo_promedio_por_orden": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.costo_promedio_por_orden": {
+			          "Target": {
+			            "Entity": "entity__medida.costo_promedio_por_orden"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.costo_promedio_por_orden"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_costo_promedio_por_orden"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_estado_garantia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.estado_garantia": {
+			          "Target": {
+			            "Entity": "dim_equipo.estado_garantia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.estado_garantia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_estado_garantias"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_antigüedad_promedio_backlog_días": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.antigüedad_promedio_backlog_días": {
+			          "Target": {
+			            "Entity": "entity__medida.antigüedad_promedio_backlog_días"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.antigüedad_promedio_backlog_días"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_antigüedad_promedio_backlog_días"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_entity__medida_planes_ejecutados": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "entity__medida.planes_ejecutados": {
+			          "Target": {
+			            "Entity": "entity__medida.planes_ejecutados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.planes_ejecutados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have_planes_ejecutados"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_entity__medida_avance_plan_anual": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "entity__medida.avance_plan_anual": {
+			          "Target": {
+			            "Entity": "entity__medida.avance_plan_anual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.avance_plan_anual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have__avance_plan_anual"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_disponibilidad": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.disponibilidad": {
+			          "Target": {
+			            "Entity": "entity__medida.disponibilidad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.disponibilidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_disponibilidad"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_correctivas_bajo_garantía1": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.correctivas_bajo_garantía1": {
+			          "Target": {
+			            "Entity": "entity__medida.correctivas_bajo_garantía1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.correctivas_bajo_garantía1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have__correctivas_bajo_garantía"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_correctivas_bajo_garantía": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.correctivas_bajo_garantía": {
+			          "Target": {
+			            "Entity": "entity__medida.correctivas_bajo_garantía"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.correctivas_bajo_garantía"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_correctivas_bajo_garantía"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_entity__medida_cumplimiento_plan": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "entity__medida.cumplimiento_plan": {
+			          "Target": {
+			            "Entity": "entity__medida.cumplimiento_plan"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.cumplimiento_plan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have__cumplimiento_plan"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_entity__medida_planes_no_evaluables": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "entity__medida.planes_no_evaluables": {
+			          "Target": {
+			            "Entity": "entity__medida.planes_no_evaluables"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.planes_no_evaluables"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have_planes_no_evaluables"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_entity__medida_planes_totales": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "entity__medida.planes_totales": {
+			          "Target": {
+			            "Entity": "entity__medida.planes_totales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.planes_totales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have_planes_totales"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_entity__medida_planes_evaluables": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "entity__medida.planes_evaluables": {
+			          "Target": {
+			            "Entity": "entity__medida.planes_evaluables"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.planes_evaluables"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have_planes_evaluables"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_entity__medida_planes_cumplidos": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "entity__medida.planes_cumplidos": {
+			          "Target": {
+			            "Entity": "entity__medida.planes_cumplidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.planes_cumplidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have_planes_cumplidos"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_días_operativos_flota": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.días_operativos_flota": {
+			          "Target": {
+			            "Entity": "entity__medida.días_operativos_flota"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.días_operativos_flota"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_días_operativos_flota"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_MTBF_días": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.MTBF_días": {
+			          "Target": {
+			            "Entity": "entity__medida.MTBF_días"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.MTBF_días"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_MTBF_días"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_entity__medida_equipos_en_contexto": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "entity__medida.equipos_en_contexto": {
+			          "Target": {
+			            "Entity": "entity__medida.equipos_en_contexto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.equipos_en_contexto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_equipos_en_contexto"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_MTTR_días": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.MTTR_días": {
+			          "Target": {
+			            "Entity": "entity__medida.MTTR_días"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.MTTR_días"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_MTTR_días"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_órdenes_correctivas_cerradas": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.órdenes_correctivas_cerradas": {
+			          "Target": {
+			            "Entity": "entity__medida.órdenes_correctivas_cerradas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.órdenes_correctivas_cerradas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_órdenes_correctivas_cerradas"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_órdenes_abiertas": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.órdenes_abiertas": {
+			          "Target": {
+			            "Entity": "entity__medida.órdenes_abiertas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.órdenes_abiertas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_órdenes_abiertas"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_órdenes_preventivas": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.órdenes_preventivas": {
+			          "Target": {
+			            "Entity": "entity__medida.órdenes_preventivas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.órdenes_preventivas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_órdenes_preventivas"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_órdenes_correctivas": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.órdenes_correctivas": {
+			          "Target": {
+			            "Entity": "entity__medida.órdenes_correctivas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.órdenes_correctivas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_órdenes_correctivas"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_costo_total_mantenimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.costo_total_mantenimiento": {
+			          "Target": {
+			            "Entity": "entity__medida.costo_total_mantenimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.costo_total_mantenimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_costo_total_mantenimiento"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_costo_mano_obra": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.costo_mano_obra": {
+			          "Target": {
+			            "Entity": "entity__medida.costo_mano_obra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.costo_mano_obra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_costo_mano_obra"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_costo_repuestos": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.costo_repuestos": {
+			          "Target": {
+			            "Entity": "entity__medida.costo_repuestos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.costo_repuestos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_costo_repuestos"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_total_órdenes": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.total_órdenes": {
+			          "Target": {
+			            "Entity": "entity__medida.total_órdenes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.total_órdenes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_total_órdenes"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_es_futuro": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.es_futuro": {
+			          "Target": {
+			            "Entity": "dim_fecha.es_futuro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.es_futuro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_es_futuros"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_es_fin_de_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.es_fin_de_semana": {
+			          "Target": {
+			            "Entity": "dim_fecha.es_fin_de_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.es_fin_de_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_es_fin_de_semanas"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_dia_semana_nombre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.dia_semana_nombre": {
+			          "Target": {
+			            "Entity": "dim_fecha.dia_semana_nombre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.dia_semana_nombre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_dia_semana_nombres"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_dia_semana_num": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.dia_semana_num": {
+			          "Target": {
+			            "Entity": "dim_fecha.dia_semana_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.dia_semana_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_dia_semana_nums"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_anio_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.anio_me": {
+			          "Target": {
+			            "Entity": "dim_fecha.anio_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.anio_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_anio_me"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.trimestre": {
+			          "Target": {
+			            "Entity": "dim_fecha.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_anio": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.anio": {
+			          "Target": {
+			            "Entity": "dim_fecha.anio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.anio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_anios"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_mes_num": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.mes_num": {
+			          "Target": {
+			            "Entity": "dim_fecha.mes_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.mes_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_mes_nums"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_mes_nombre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.mes_nombre": {
+			          "Target": {
+			            "Entity": "dim_fecha.mes_nombre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.mes_nombre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_mes_nombres"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.date": {
+			          "Target": {
+			            "Entity": "dim_fecha.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_dates"
+			        }
+			      ]
+			    },
+			    "fact_plan_mantenimiento_has_fecha_planificada": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_plan_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento"
+			          }
+			        },
+			        "fact_plan_mantenimiento.fecha_planificada": {
+			          "Target": {
+			            "Entity": "fact_plan_mantenimiento.fecha_planificada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_plan_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "fact_plan_mantenimiento.fecha_planificada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_plan_mantenimientos_have_fecha_planificadas"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_falla_reportada": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "fact_ordenes_trabajo.falla_reportada": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo.falla_reportada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo.falla_reportada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_falla_reportadas"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_horas_detencion": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "fact_ordenes_trabajo.horas_detencion": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo.horas_detencion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo.horas_detencion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_horas_detencions"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_costo_mano_obra": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "fact_ordenes_trabajo.costo_mano_obra": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo.costo_mano_obra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo.costo_mano_obra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_costo_mano_obras"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "fact_ordenes_trabajo.costo_mano_obra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "costo_mano_obra_indicates_how_expensive_fact_ordenes_trabajos_are"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_costo_repuesto": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "fact_ordenes_trabajo.costo_repuesto": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo.costo_repuesto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo.costo_repuesto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_costo_repuestos1"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "fact_ordenes_trabajo.costo_repuesto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "costo_repuesto_indicates_how_expensive_fact_ordenes_trabajos_are"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_fecha_cierre": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "fact_ordenes_trabajo.fecha_cierre": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo.fecha_cierre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo.fecha_cierre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_fecha_cierres"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_fecha_inicio": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "fact_ordenes_trabajo.fecha_inicio": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo.fecha_inicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo.fecha_inicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_fecha_inicios"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_fecha_solicitud": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "fact_ordenes_trabajo.fecha_solicitud": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo.fecha_solicitud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo.fecha_solicitud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_fecha_solicituds"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_orden_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "fact_ordenes_trabajo.orden_id": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo.orden_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "fact_ordenes_trabajo.orden_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_orden_ids"
+			        }
+			      ]
+			    },
+			    "dim_ubicacion_has_edificio": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_ubicacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_ubicacion": {
+			          "Target": {
+			            "Entity": "dim_ubicacion"
+			          }
+			        },
+			        "dim_ubicacion.edificio": {
+			          "Target": {
+			            "Entity": "dim_ubicacion.edificio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ubicacion"
+			            },
+			            "Object": {
+			              "Role": "dim_ubicacion.edificio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ubicacions_have_edificios"
+			        }
+			      ]
+			    },
+			    "dim_ubicacion_has_piso": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_ubicacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_ubicacion": {
+			          "Target": {
+			            "Entity": "dim_ubicacion"
+			          }
+			        },
+			        "dim_ubicacion.piso": {
+			          "Target": {
+			            "Entity": "dim_ubicacion.piso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ubicacion"
+			            },
+			            "Object": {
+			              "Role": "dim_ubicacion.piso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ubicacions_have_pisos"
+			        }
+			      ]
+			    },
+			    "dim_ubicacion_has_servicio_clinico": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_ubicacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_ubicacion": {
+			          "Target": {
+			            "Entity": "dim_ubicacion"
+			          }
+			        },
+			        "dim_ubicacion.servicio_clinico": {
+			          "Target": {
+			            "Entity": "dim_ubicacion.servicio_clinico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ubicacion"
+			            },
+			            "Object": {
+			              "Role": "dim_ubicacion.servicio_clinico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ubicacions_have_servicio_clinicos"
+			        }
+			      ]
+			    },
+			    "dim_ubicacion_has_ubicacion_id": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_ubicacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_ubicacion": {
+			          "Target": {
+			            "Entity": "dim_ubicacion"
+			          }
+			        },
+			        "dim_ubicacion.ubicacion_id": {
+			          "Target": {
+			            "Entity": "dim_ubicacion.ubicacion_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ubicacion"
+			            },
+			            "Object": {
+			              "Role": "dim_ubicacion.ubicacion_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ubicacions_have_ubicacion_ids"
+			        }
+			      ]
+			    },
+			    "dim_tipo_mantenimiento_has_nombre_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tipo_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tipo_mantenimiento": {
+			          "Target": {
+			            "Entity": "dim_tipo_mantenimiento"
+			          }
+			        },
+			        "dim_tipo_mantenimiento.nombre_tipo": {
+			          "Target": {
+			            "Entity": "dim_tipo_mantenimiento.nombre_tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tipo_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "dim_tipo_mantenimiento.nombre_tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tipo_mantenimientos_have_nombre_tipos"
+			        }
+			      ]
+			    },
+			    "dim_tipo_mantenimiento_has_tipo_mantenimiento_id": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tipo_mantenimiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tipo_mantenimiento": {
+			          "Target": {
+			            "Entity": "dim_tipo_mantenimiento"
+			          }
+			        },
+			        "dim_tipo_mantenimiento.tipo_mantenimiento_id": {
+			          "Target": {
+			            "Entity": "dim_tipo_mantenimiento.tipo_mantenimiento_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tipo_mantenimiento"
+			            },
+			            "Object": {
+			              "Role": "dim_tipo_mantenimiento.tipo_mantenimiento_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tipo_mantenimientos_have_tipo_mantenimiento_ids"
+			        }
+			      ]
+			    },
+			    "dim_tecnico_has_especialidad": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tecnico"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tecnico": {
+			          "Target": {
+			            "Entity": "dim_tecnico"
+			          }
+			        },
+			        "dim_tecnico.especialidad": {
+			          "Target": {
+			            "Entity": "dim_tecnico.especialidad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tecnico"
+			            },
+			            "Object": {
+			              "Role": "dim_tecnico.especialidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tecnicos_have_especialidads"
+			        }
+			      ]
+			    },
+			    "dim_tecnico_has_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tecnico"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tecnico": {
+			          "Target": {
+			            "Entity": "dim_tecnico"
+			          }
+			        },
+			        "dim_tecnico.tipo": {
+			          "Target": {
+			            "Entity": "dim_tecnico.tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tecnico"
+			            },
+			            "Object": {
+			              "Role": "dim_tecnico.tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tecnicos_have_tipos"
+			        }
+			      ]
+			    },
+			    "dim_tecnico_has_nombre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tecnico"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tecnico": {
+			          "Target": {
+			            "Entity": "dim_tecnico"
+			          }
+			        },
+			        "dim_tecnico.nombre": {
+			          "Target": {
+			            "Entity": "dim_tecnico.nombre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tecnico"
+			            },
+			            "Object": {
+			              "Role": "dim_tecnico.nombre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tecnicos_have_nombres"
+			        }
+			      ]
+			    },
+			    "dim_tecnico_has_tecnico_id": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tecnico"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tecnico": {
+			          "Target": {
+			            "Entity": "dim_tecnico"
+			          }
+			        },
+			        "dim_tecnico.tecnico_id": {
+			          "Target": {
+			            "Entity": "dim_tecnico.tecnico_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tecnico"
+			            },
+			            "Object": {
+			              "Role": "dim_tecnico.tecnico_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tecnicos_have_tecnico_ids"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_estado_actual": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.estado_actual": {
+			          "Target": {
+			            "Entity": "dim_equipo.estado_actual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.estado_actual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_estado_actuals"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_estrategia_mantenimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.estrategia_mantenimiento": {
+			          "Target": {
+			            "Entity": "dim_equipo.estrategia_mantenimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.estrategia_mantenimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_estrategia_mantenimientos"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_bajo_plan_mantenimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.bajo_plan_mantenimiento": {
+			          "Target": {
+			            "Entity": "dim_equipo.bajo_plan_mantenimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.bajo_plan_mantenimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_bajo_plan_mantenimientos"
+			        },
+			        {
+			          "DynamicAdjective": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Adjective": {
+			              "Role": "dim_equipo.bajo_plan_mantenimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bajo_plan_mantenimientos_describe_dim_equipos"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_fecha_vencimiento_garantia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.fecha_vencimiento_garantia": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_fecha_vencimiento_garantias"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_modalidad_propiedad": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.modalidad_propiedad": {
+			          "Target": {
+			            "Entity": "dim_equipo.modalidad_propiedad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.modalidad_propiedad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_modalidad_propiedads"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_vida_util_anio": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.vida_util_anio": {
+			          "Target": {
+			            "Entity": "dim_equipo.vida_util_anio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.vida_util_anio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_vida_util_anios"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_costo_adquisicion": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.costo_adquisicion": {
+			          "Target": {
+			            "Entity": "dim_equipo.costo_adquisicion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.costo_adquisicion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_costo_adquisicions"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "dim_equipo.costo_adquisicion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "costo_adquisicion_indicates_how_expensive_dim_equipos_are"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_fecha_adquisicion": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.fecha_adquisicion": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_adquisicion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_adquisicion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_fecha_adquisicions"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_criticidad": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.criticidad": {
+			          "Target": {
+			            "Entity": "dim_equipo.criticidad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.criticidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_criticidads"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_clase_riesgo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.clase_riesgo": {
+			          "Target": {
+			            "Entity": "dim_equipo.clase_riesgo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.clase_riesgo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_clase_riesgos"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_modelo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.modelo": {
+			          "Target": {
+			            "Entity": "dim_equipo.modelo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.modelo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_modelos"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.marca": {
+			          "Target": {
+			            "Entity": "dim_equipo.marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_marcas"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_clase_funcional": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.clase_funcional": {
+			          "Target": {
+			            "Entity": "dim_equipo.clase_funcional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.clase_funcional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_clase_funcionals"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_nombre_equipo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.nombre_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo.nombre_equipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.nombre_equipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_nombre_equipos"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_numero_serie": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.numero_serie": {
+			          "Target": {
+			            "Entity": "dim_equipo.numero_serie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.numero_serie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_numero_series"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_codigo_inventario": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.codigo_inventario": {
+			          "Target": {
+			            "Entity": "dim_equipo.codigo_inventario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.codigo_inventario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_codigo_inventarios"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_equipo_id": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "dim_equipo.equipo_id": {
+			          "Target": {
+			            "Entity": "dim_equipo.equipo_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.equipo_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_equipo_ids"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_vencimiento_garantia_jerarquía_de_fecha_has_dim_equipo_fecha_vencimiento_garantia_día": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			          }
+			        },
+			        "dim_equipo.fecha_vencimiento_garantia.día": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días1"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_vencimiento_garantia_año_has_dim_equipo_fecha_vencimiento_garantia_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_vencimiento_garantia.año": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.año"
+			          }
+			        },
+			        "dim_equipo.fecha_vencimiento_garantia.trimestre": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.año"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años1"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_vencimiento_garantia_trimestre_has_dim_equipo_fecha_vencimiento_garantia_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_vencimiento_garantia.trimestre": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			          }
+			        },
+			        "dim_equipo.fecha_vencimiento_garantia.me": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.me"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres1"
+			        }
+			      ]
+			    },
+			    "dim_equipo_fecha_vencimiento_garantia_me_has_dim_equipo_fecha_vencimiento_garantia_día": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo.fecha_vencimiento_garantia.me": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.me"
+			          }
+			        },
+			        "dim_equipo.fecha_vencimiento_garantia.día": {
+			          "Target": {
+			            "Entity": "dim_equipo.fecha_vencimiento_garantia.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.me"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.día"
+			            },
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_equipo.fecha_vencimiento_garantia.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me1"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

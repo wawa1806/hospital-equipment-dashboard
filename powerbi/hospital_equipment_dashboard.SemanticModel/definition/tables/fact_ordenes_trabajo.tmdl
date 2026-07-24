@@ -1,0 +1,147 @@
+table fact_ordenes_trabajo
+	lineageTag: b801b423-396e-4116-9755-5aad6bde3212
+
+	column orden_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5decdf5e-d40a-467b-89b8-41eb13be1d6a
+		summarizeBy: sum
+		sourceColumn: orden_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo_id
+		dataType: int64
+		formatString: 0
+		lineageTag: fd620009-cf6f-4251-bf63-7608f7172537
+		summarizeBy: none
+		sourceColumn: equipo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ubicacion_id
+		dataType: int64
+		formatString: 0
+		lineageTag: d06740ae-3952-4e41-808d-298d6b641f00
+		summarizeBy: none
+		sourceColumn: ubicacion_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tecnico_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f1716d9-4fe7-454e-9de1-ddda374e38d6
+		summarizeBy: none
+		sourceColumn: tecnico_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_mantenimiento_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 28b542e7-67f0-4b5b-b054-922f7c2636b0
+		summarizeBy: none
+		sourceColumn: tipo_mantenimiento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_solicitud
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: aa82cea7-dc1a-4c7c-9c35-15ab262936de
+		summarizeBy: none
+		sourceColumn: fecha_solicitud
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_inicio
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1f920048-f2c9-4eb9-a716-8ca0167ca9bc
+		summarizeBy: none
+		sourceColumn: fecha_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_cierre
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 88044ee1-b9f0-4725-8850-bbde14f12517
+		summarizeBy: none
+		sourceColumn: fecha_cierre
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column costo_repuestos
+		dataType: decimal
+		formatString: \$#,0;\$-#,0;\$#,0
+		lineageTag: c87bfa7a-f473-48cb-a631-e49f4e675a62
+		summarizeBy: sum
+		sourceColumn: costo_repuestos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CL"}
+
+	column costo_mano_obra
+		dataType: decimal
+		formatString: \$#,0;\$-#,0;\$#,0
+		lineageTag: b3c1a481-c837-40c4-bf99-5b36b4f8f35a
+		summarizeBy: sum
+		sourceColumn: costo_mano_obra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CL"}
+
+	column horas_detencion
+		dataType: decimal
+		formatString: #,0.0
+		lineageTag: 1445fd85-abbf-4120-a9bc-4ee501e146f6
+		summarizeBy: sum
+		sourceColumn: horas_detencion
+
+		annotation SummarizationSetBy = Automatic
+
+	column falla_reportada
+		dataType: string
+		lineageTag: 46e9d829-8b1c-4bc6-8b05-60e3ada633b1
+		summarizeBy: none
+		sourceColumn: falla_reportada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_ordenes_trabajo = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(
+				        File.Contents(RutaDatos & "fact_ordenes.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(Encabezados, {{"orden_id", Int64.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional1" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional", {{"equipo_id", Int64.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional2" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional1", {{"ubicacion_id", Int64.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional3" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional2", {{"tecnico_id", Int64.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional4" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional3", {{"tipo_mantenimiento_id", Int64.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional5" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional4", {{"fecha_solicitud", type date}}, "en-US"),
+				    #"Tipo cambiado con configuración regional6" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional5", {{"fecha_inicio", type date}}, "en-US"),
+				    #"Tipo cambiado con configuración regional7" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional6", {{"fecha_cierre", type date}}, "en-US"),
+				    #"Tipo cambiado con configuración regional8" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional7", {{"costo_repuestos", Currency.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional9" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional8", {{"costo_mano_obra", Currency.Type}}, "en-US"),
+				    #"Tipo cambiado con configuración regional10" = Table.TransformColumnTypes(#"Tipo cambiado con configuración regional9", {{"horas_detencion", Currency.Type}}, "en-US")
+				in
+				    #"Tipo cambiado con configuración regional10"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,108 @@
+table dim_fecha
+	lineageTag: 1daae846-6235-4a91-bff5-8e89128d35ec
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: 6656ba75-413b-4f6a-88d0-6b180f7561bb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_nombre =
+			SWITCH(
+			    dim_fecha[mes_num],
+			    1, "Enero",
+			    2, "Febrero",
+			    3, "Marzo",
+			    4, "Abril",
+			    5, "Mayo",
+			    6, "Junio",
+			    7, "Julio",
+			    8, "Agosto",
+			    9, "Septiembre",
+			    10, "Octubre",
+			    11, "Noviembre",
+			    12, "Diciembre",
+			    "Mes"
+			)
+		lineageTag: 49606fbe-a356-4335-8dc7-d1d7204e5271
+		summarizeBy: none
+		sortByColumn: mes_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_num = MONTH(dim_fecha[Date])
+		formatString: 0
+		lineageTag: b35f1c52-e873-4640-8a7f-9c7478136f64
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio = YEAR(dim_fecha[Date])
+		formatString: 0
+		lineageTag: 8a4b805f-b348-4fd1-9e7a-25797305fdb0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre = "T" & QUARTER(dim_fecha[Date])
+		lineageTag: 56119962-8f64-4018-aa05-0eef840802a6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_mes = dim_fecha[anio] & "-" & FORMAT(dim_fecha[mes_num], "00")
+		lineageTag: 851f4720-0a4f-4b4e-8661-6ac455cb08cc
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana_num = WEEKDAY(dim_fecha[Date], 2)
+		formatString: 0
+		lineageTag: c8fc8848-7f40-4df1-b294-efb5a3b39a03
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana_nombre =
+			SWITCH(
+			    dim_fecha[dia_semana_num],
+			    1, "Lunes",
+			    2, "Martes",
+			    3, "Miércoles",
+			    4, "Jueves",
+			    5, "Viernes",
+			    6, "Sábado",
+			    7, "Domingo",
+			    "Día"
+			)
+		lineageTag: 44626e8d-c671-4f15-b3e3-117a685e1401
+		summarizeBy: none
+		sortByColumn: dia_semana_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_fin_de_semana = dim_fecha[dia_semana_num] >= 6
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7c5ad5ef-9cd6-4923-96ec-e51eecd78a65
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_futuro = dim_fecha[Date] > DATE(2026,6,30)
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a20abbfe-9acb-4466-befa-6a47f7728d44
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_fecha = calculated
+		mode: import
+		source = CALENDAR(DATE(2023,1,1), DATE(2026,12,31))
+
+	annotation PBI_Id = 94218df03f644e929a783a0042426abc
+

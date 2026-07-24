@@ -1,0 +1,242 @@
+table _Medidas
+	lineageTag: 7747e79a-6c5d-4a27-888c-391d7087b189
+
+	measure 'Total Órdenes' = COUNTROWS(fact_ordenes_trabajo)
+		formatString: #,0
+		displayFolder: Conteos base
+		lineageTag: ab946fef-e322-4a2c-b078-9ffcbbf4bd2e
+
+	measure 'Costo Repuestos' = SUM(fact_ordenes_trabajo[costo_repuestos])
+		formatString: \$#,0;\$-#,0;\$#,0
+		displayFolder: Costos
+		lineageTag: 98cc38b8-bdab-4db5-8469-b1101f40e7b1
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CL"}
+
+	measure 'Costo Mano Obra' = SUM(fact_ordenes_trabajo[costo_mano_obra])
+		formatString: \$#,0;\$-#,0;\$#,0
+		displayFolder: Costos
+		lineageTag: 3c42dab8-c97d-4353-90dd-7e0bbedcb56d
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CL"}
+
+	measure 'Costo Total Mantenimiento' = [Costo Repuestos] + [Costo Mano Obra]
+		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
+		displayFolder: Costos
+		lineageTag: 79f46f3a-a133-4bf9-b033-a5697b6e0d9f
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Órdenes Correctivas' = CALCULATE([Total Órdenes], dim_tipo_mantenimiento[nombre_tipo] == "Correctiva")
+		formatString: 0
+		displayFolder: Conteos base
+		lineageTag: feb18bb6-9661-437d-b695-6f059da70887
+
+	measure 'Órdenes Preventivas' = CALCULATE([Total Órdenes], dim_tipo_mantenimiento[nombre_tipo] == "Preventiva")
+		formatString: 0
+		displayFolder: Conteos base
+		lineageTag: 1e0cf303-e5a8-4d94-9a79-75ba620920f5
+
+	measure 'Órdenes Abiertas' = CALCULATE([Total Órdenes], ISBLANK(fact_ordenes_trabajo[fecha_cierre]))
+		formatString: 0
+		displayFolder: Conteos base
+		lineageTag: c7a7e372-96d2-4800-b36e-37dd53f2e81e
+
+	measure 'Órdenes Correctivas Cerradas' = CALCULATE([Órdenes Correctivas], NOT(ISBLANK(fact_ordenes_trabajo[fecha_cierre])))
+		formatString: 0
+		displayFolder: Conteos base
+		lineageTag: 703a1004-a854-4a9a-a9fb-acf40b2edbae
+
+	measure 'MTTR (días)' =
+			CALCULATE(
+			    AVERAGEX(fact_ordenes_trabajo,DATEDIFF(fact_ordenes_trabajo[fecha_inicio],fact_ordenes_trabajo[fecha_cierre],DAY)),
+			    dim_tipo_mantenimiento[nombre_tipo] == "Correctiva",
+			    NOT(ISBLANK(fact_ordenes_trabajo[fecha_cierre]))
+			)
+		formatString: 0.0
+		displayFolder: Confiabilidad
+		lineageTag: 26c3e71f-c9a7-4db5-b5ef-3769de2108a4
+
+	measure 'Equipos en Contexto' = COUNTROWS(dim_equipo)
+		formatString: 0
+		displayFolder: Conteos base
+		lineageTag: afdbae3e-a629-4ce2-a282-14064ccb5225
+
+	measure 'MTBF (días)' = DIVIDE([Días Operativos Flota], [Órdenes Correctivas])
+		formatString: 0.0
+		displayFolder: Confiabilidad
+		lineageTag: 29f8e94b-fc82-4050-8019-d97ba5d5d006
+
+	measure 'Días Operativos Flota' = ```
+			
+			 VAR FechaIniPeriodo = CALCULATE(MIN(dim_fecha[Date]), dim_fecha[es_futuro] = False)
+			 VAR FechaFinPeriodo = CALCULATE(MAX(dim_fecha[Date]), dim_fecha[es_futuro] = False)
+			 RETURN
+			 SUMX(
+			    dim_equipo,
+			    VAR InicioOperativo = MAX(dim_equipo[fecha_adquisicion], FechaIniPeriodo)
+			    VAR DiasEquipo = DATEDIFF(InicioOperativo, FechaFinPeriodo+1,DAY)
+			    RETURN IF(DiasEquipo >= 0, DiasEquipo, 0)
+			 )
+			```
+		formatString: #,0
+		lineageTag: 004825ba-78f3-414a-af73-fdfadf43ff1d
+
+	measure 'Planes Cumplidos' = ```
+			
+			VAR Tolerancia = 7
+			VAR Corte = CALCULATE(MAX(dim_fecha[Date]), ALL(dim_fecha), dim_fecha[es_futuro] == False)
+			RETURN
+			SUMX(
+			    FILTER(fact_plan_mantenimiento, fact_plan_mantenimiento[fecha_planificada] + Tolerancia <= Corte),
+			    VAR Eq = fact_plan_mantenimiento[equipo_id]
+			    VAR FP = fact_plan_mantenimiento[fecha_planificada]
+			    VAR OrdenesQueCumplen =
+			    FILTER(
+			        ALL(fact_ordenes_trabajo),
+			        Eq == fact_ordenes_trabajo[equipo_id]
+			        && RELATED(dim_tipo_mantenimiento[nombre_tipo]) == "Preventiva"
+			        && fact_ordenes_trabajo[fecha_inicio] >= FP - Tolerancia && fact_ordenes_trabajo[fecha_inicio] <= FP + Tolerancia
+			    )
+			    RETURN IF(COUNTROWS(OrdenesQueCumplen) > 0,1,0)
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Plan
+		lineageTag: d08a407a-7b93-4dae-90b8-c0966a417d82
+
+	measure 'Planes Evaluables' =
+			
+			VAR Tolerancia = 7
+			VAR Corte = CALCULATE(MAX(dim_fecha[Date]), ALL(dim_fecha), dim_fecha[es_futuro] = FALSE)
+			RETURN
+			COUNTROWS(FILTER(fact_plan_mantenimiento, fact_plan_mantenimiento[fecha_planificada] + Tolerancia <= Corte))
+		formatString: 0
+		displayFolder: Plan
+		lineageTag: ba4e6726-8765-465e-b2be-6aa56da43c1e
+
+	measure 'Planes Totales' = COUNTROWS(fact_plan_mantenimiento)
+		formatString: 0
+		displayFolder: Conteos base
+		lineageTag: 0076c151-57ea-4567-ad54-21f7da2c11f8
+
+	measure 'Planes No Evaluables' = [Planes Totales] - [Planes Evaluables]
+		formatString: 0
+		displayFolder: Plan
+		lineageTag: fcfab7ca-4185-4dbf-87ef-d3329e993389
+
+	measure '% Cumplimiento Plan' = DIVIDE([Planes Cumplidos], [Planes Evaluables])
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Plan
+		lineageTag: 1714f147-a1e0-4ac8-921f-9ffbafae8e51
+
+	measure 'Correctivas Bajo Garantía' =
+			
+			COUNTROWS(
+			    FILTER(
+			        fact_ordenes_trabajo,
+			        RELATED(dim_tipo_mantenimiento[nombre_tipo]) == "Correctiva"
+			            && NOT(ISBLANK(RELATED(dim_equipo[fecha_vencimiento_garantia])))
+			            && fact_ordenes_trabajo[fecha_solicitud] <= RELATED(dim_equipo[fecha_vencimiento_garantia])
+			    )
+			)
+		formatString: 0
+		displayFolder: Garantía
+		lineageTag: 77839c46-4cbf-4ad8-85de-f1a520745c85
+
+	measure '% Correctivas Bajo Garantía' = DIVIDE([Correctivas Bajo Garantía], [Órdenes Correctivas])
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Garantía
+		lineageTag: c4e2e7b5-e692-4819-a7a6-1562580dfd0a
+
+	measure Disponibilidad = 1 - DIVIDE(SUM(fact_ordenes_trabajo[horas_detencion]),[Días Operativos Flota]*24)
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		displayFolder: Confiabilidad
+		lineageTag: 7c76b065-5f23-4cd0-926f-4c48d98eb7e1
+
+	measure '% Avance Plan Anual' = DIVIDE([Planes Ejecutados], [Planes Totales])
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Plan
+		lineageTag: fe5ed225-ba89-490c-aa42-59fed4a3c1f5
+
+	measure 'Planes Ejecutados' =
+			
+			VAR Tolerancia = 7
+			RETURN
+			SUMX(
+			    fact_plan_mantenimiento,
+			    VAR Eq = fact_plan_mantenimiento[equipo_id]
+			    VAR FP = fact_plan_mantenimiento[fecha_planificada]
+			    VAR OrdenesQueCumplen =
+			    FILTER(
+			        ALL(fact_ordenes_trabajo),
+			        Eq == fact_ordenes_trabajo[equipo_id]
+			        && RELATED(dim_tipo_mantenimiento[nombre_tipo]) == "Preventiva"
+			        && fact_ordenes_trabajo[fecha_inicio] >= FP - Tolerancia && fact_ordenes_trabajo[fecha_inicio] <= FP + Tolerancia
+			    )
+			    RETURN IF(COUNTROWS(OrdenesQueCumplen) > 0,1,0)
+			)
+		formatString: 0
+		displayFolder: Plan
+		lineageTag: 72f2c5e4-56be-4e6e-96fc-8f117b0aaa59
+
+	measure 'Antigüedad Promedio Backlog (Días)' =
+			
+			VAR Corte = CALCULATE(MAX(dim_fecha[Date]), ALL(dim_fecha), dim_fecha[es_futuro]=FALSE)
+			RETURN
+			CALCULATE(AVERAGEX(fact_ordenes_trabajo, DATEDIFF(fact_ordenes_trabajo[fecha_solicitud], Corte,DAY)), ISBLANK(fact_ordenes_trabajo[fecha_cierre]))
+		formatString: 0.0
+		lineageTag: cb21fea9-0bb4-48fc-8218-87a3458853fc
+
+	measure 'Costo Promedio por Orden' = DIVIDE([Costo Total Mantenimiento], [Total Órdenes])
+		formatString: \$#,0.###############;\$-#,0.###############;\$#,0.###############
+		displayFolder: Costos
+		lineageTag: 1bd85c4d-da72-4be8-bdd0-395c4383d0a7
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CL"}
+
+	measure 'Equipos Garantía por Vencer' =
+			
+			VAR Corte = CALCULATE(MAX(dim_fecha[Date]), ALL(dim_fecha), dim_fecha[es_futuro] = FALSE)
+			VAR SeisMesesDespues = EDATE(Corte, 6)
+			RETURN
+			CALCULATE(COUNTROWS(dim_equipo), dim_equipo[fecha_vencimiento_garantia] < SeisMesesDespues, dim_equipo[fecha_vencimiento_garantia] >= Corte)
+		formatString: 0
+		displayFolder: Garantía
+		lineageTag: ea9b180c-b4ff-4cd3-b6ef-e2d0d3b47e24
+
+	measure 'Órdenes Año Actual' =
+			
+			VAR AnioActual = CALCULATE(MAX(dim_fecha[anio]), ALL(dim_fecha), dim_fecha[es_futuro] = FALSE)
+			RETURN CALCULATE([Total Órdenes], dim_fecha[anio] = AnioActual)
+		formatString: 0
+		displayFolder: Conteos base
+		lineageTag: cff60f55-8337-4779-9492-039eba4d86b0
+
+	measure 'Órdenes Año Anterior' =
+			
+			VAR AnioActual = CALCULATE(MAX(dim_fecha[anio]), ALL(dim_fecha), dim_fecha[es_futuro] = FALSE)
+			VAR AnioAnterior = AnioActual - 1
+			RETURN CALCULATE([Total Órdenes], dim_fecha[anio] = AnioAnterior)
+		formatString: 0
+		displayFolder: Conteos base
+		lineageTag: af146202-5060-447e-a84c-8aeb476f2cd4
+
+	measure '% Avance Esperado' = DIVIDE([Planes Evaluables], [Planes Totales])
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Plan
+		lineageTag: 197da6fa-c89a-46c0-8e71-b09dd9194477
+
+	partition _Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

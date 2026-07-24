@@ -1,0 +1,53 @@
+table dim_tecnico
+	lineageTag: 0246a7a2-ff4b-49f8-a57b-cb3937447c7d
+
+	column tecnico_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ba37a97d-1f8b-400f-ae61-cfbc5d5d48a7
+		summarizeBy: none
+		sourceColumn: tecnico_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: fa351767-ff1b-47d6-a249-95e2928fe41b
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: b54f9ef8-190b-484f-8279-0004ed30b01b
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column especialidad
+		dataType: string
+		lineageTag: 6c17d3a2-9180-460b-b09c-bf02e9ac22ec
+		summarizeBy: none
+		sourceColumn: especialidad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_tecnico = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(
+				        File.Contents(RutaDatos & "dim_tecnico.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(Encabezados, {{"tecnico_id", Int64.Type}}, "en-US")
+				in
+				    #"Tipo cambiado con configuración regional"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

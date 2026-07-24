@@ -1,0 +1,28 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["RutaDatos","dim_equipo","dim_tecnico","dim_tipo_mantenimiento","dim_ubicacion","fact_ordenes_trabajo","fact_plan_mantenimiento","_Medidas"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_equipo
+ref table DateTableTemplate_0e93df86-61e2-4766-82db-ef77926c70a2
+ref table LocalDateTable_19f666b1-64a9-42dc-bb55-f27fd7b9656e
+ref table LocalDateTable_f35be27d-48a3-40ae-9285-d26092eb4d58
+ref table dim_tecnico
+ref table dim_tipo_mantenimiento
+ref table dim_ubicacion
+ref table fact_ordenes_trabajo
+ref table fact_plan_mantenimiento
+ref table dim_fecha
+ref table _Medidas
+
+ref cultureInfo es-ES
+
