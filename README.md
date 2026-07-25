@@ -23,7 +23,6 @@ Gasto en el tiempo, desglose del gasto en clases y tipo de mantención, estado d
 Drill-through de clase funcional de visualización MTBF por Clase Funcional; informa costos, órdenes, fallas.
 
 ## Arquitectura de datos
-[Modelo estrella: 4 dims + 2 facts. Drill-across vía dimensiones conformadas.]
 ```mermaid
 erDiagram
     dim_equipo||--o{ fact_ordenes_trabajo :  ""
