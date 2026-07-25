@@ -1,9 +1,9 @@
 # Dashboard de Gestión de Mantenimiento de Equipos Médicos Hospitalarios
 
-Dashboard simulado para la gestión de mantenimiento con 2000 equipos médicos en un hospital sobre un pipelne de datos reproducible y testeado.
+Dashboard simulado para la gestión de mantenimiento con 2000 equipos médicos en un hospital sobre un pipeline de datos reproducible y testeado.
 
 ## Escenario
-Hospital chieno de complejidad media-alta con 2000 equipos, en una ventana desde el 1 de Enero de 2023 hasta el 30 de Junio de 2026, generandose un corte, por lo que equipos con ordenes después del corte no son evaluables. Conjunto de datos sintéticos y reproducibles con SEED. Los hospitales y clínicas gestionan cientos de equipos médicos, cuya información suele registrarse en varias planillas. Parte de la complejidad de esto es la dificultad de desglosar costos anuales o mensuales, mantenciones o decisiones sobre ciertos equipos, etc.
+Hospital chileno de complejidad media-alta con 2000 equipos, en una ventana desde el 1 de Enero de 2023 hasta el 30 de Junio de 2026, generandose un corte. Conjunto de datos sintéticos y reproducibles con SEED. Los hospitales y clínicas gestionan cientos de equipos médicos, cuya información suele registrarse en varias planillas. Parte de la complejidad de esto es la dificultad de desglosar costos anuales o mensuales, mantenciones o decisiones sobre ciertos equipos.
 
 ## El dashboard
 ### Página 1 — Resumen Ejecutivo
