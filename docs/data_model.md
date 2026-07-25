@@ -80,10 +80,13 @@ erDiagram
     dim_fecha{
         date fecha PK
         int anio
-        int mes
-        string nombre_mes
-        int trimestre
-        int dia_semana
+        string anio-mes
+        string mes_nombre
+        int mes_num
+        string dia_semana_nombre
+        int dia_semana_num
         bool es_fin_de_semana
+        bool es_futuro
+        string trimestre
     }
 ```
