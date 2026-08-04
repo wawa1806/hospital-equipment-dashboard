@@ -12,7 +12,7 @@ Dashboard simulado para la gestión de mantenimiento con 2000 equipos médicos e
 ## Escenario
 Hospital chileno de complejidad media-alta con 2000 equipos, en una ventana desde el 1 de enero de 2023 hasta el 30 de junio de 2026, generándose un corte, por lo que equipos con ordenes después del corte no son evaluables. Conjunto de datos sintéticos y reproducibles con SEED. Los hospitales y clínicas gestionan cientos de equipos médicos, cuya información suele registrarse en varias planillas. Parte de la complejidad de esto es la dificultad de desglosar costos anuales o mensuales, mantenciones o decisiones sobre ciertos equipos, etc.
 
-### Página 1 — Resumen Ejecutivo
+### Página 1 - Resumen Ejecutivo
 ![...](docs/img/Pag1_Resumen.png)
 ![...](docs/img/Pag1_Resumen_Filtro.png)
 Monitoreo del año en curso.
@@ -29,7 +29,7 @@ Monitoreo del año en curso.
 - **Costo Total de Mantenimiento por Servicio Clínico**
 - **Costo Total por Tipo de Mantenimiento:** proporción entre costo correctivo y preventivo.
 
-### Página 2 — Confiabilidad y Mantenimiento
+### Página 2 - Confiabilidad y Mantenimiento
 ![...](docs/img/Pag2_Confiabilidad_y_Mantenimiento.png)
 ![...](docs/img/Pag2_Confiabilidad_y_Mantenimiento_Info.png)
 ![...](docs/img/Pag2_Confiabilidad_y_Mantenimiento_Filtro.png)
@@ -49,7 +49,7 @@ Análisis operacional.
 - **Total de Órdenes por Año-Mes:** evolución mensual; la carga correctiva sube en invierno.
 
 
-### Página 3 — Costos y Garantía
+### Página 3 - Costos y Garantía
 ![...](docs/img/Pag3_Costos_y_Garantía.png)
 ![...](docs/img/Pag3_Costos_y_Garantía_Filtro.png)
 Análisis económico. 
@@ -69,7 +69,7 @@ Análisis económico.
 
 
 
-### Página 4 — Detalle Clase Funcional
+### Página 4 - Detalle Clase Funcional
 ![...](docs/img/Pag4_Detalle_Clase_Funcional.png)
 ![...](docs/img/Pag4_Detalle_Clase_Funcional_Filtro.png)
 Drill-through desde cualquier clase en la página 2; informa costos, órdenes, fallas.
@@ -177,9 +177,6 @@ erDiagram
     }
 ```
 fact_ordenes transaccional, fact_plan factless, dim_fecha en DAX
-
-### dim_fecha en DAX
-Se genera la tabla de fecha en DAX por la autocontención y formato. El costo es que queda fuera del versionado y testing del pipeline.
 
 ## Limitaciones y roadmap
 - Los equipos dados de baja no tienen una fecha asignada.
