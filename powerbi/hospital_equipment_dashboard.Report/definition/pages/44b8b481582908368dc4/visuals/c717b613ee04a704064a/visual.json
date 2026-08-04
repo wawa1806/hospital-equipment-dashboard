@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "c717b613ee04a704064a",
   "position": {
-    "x": 0,
-    "y": 176,
-    "z": 2000,
-    "height": 544,
-    "width": 576,
+    "x": 47.999999999999993,
+    "y": 208,
+    "z": 1000,
+    "height": 480.00000000000006,
+    "width": 640,
     "tabOrder": 0
   },
   "visual": {
@@ -57,8 +57,8 @@
                 }
               },
               "queryRef": "_Medidas.Costo Total Mantenimiento",
-              "nativeQueryRef": "Costo",
-              "displayName": "Costo"
+              "nativeQueryRef": "Costo Mantenimiento",
+              "displayName": "Costo Mantenimiento"
             },
             {
               "field": {
@@ -73,6 +73,21 @@
               },
               "queryRef": "_Medidas.Total Órdenes",
               "nativeQueryRef": "Total Órdenes"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Costo Total Adquisición"
+                }
+              },
+              "queryRef": "_Medidas.Costo Total Adquisición",
+              "nativeQueryRef": "Costo Adquisición",
+              "displayName": "Costo Adquisición"
             }
           ]
         }
@@ -162,6 +177,21 @@
           },
           "selector": {
             "metadata": "_Medidas.Costo Total Mantenimiento"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

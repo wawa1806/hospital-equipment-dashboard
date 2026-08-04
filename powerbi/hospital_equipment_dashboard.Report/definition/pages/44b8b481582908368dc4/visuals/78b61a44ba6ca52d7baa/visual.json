@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "78b61a44ba6ca52d7baa",
   "position": {
-    "x": 576,
-    "y": 0,
-    "z": 6000,
-    "height": 95.999999999999986,
+    "x": 927.99999999999989,
+    "y": 95.999999999999986,
+    "z": 3000,
+    "height": 80,
     "width": 304,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "card",
@@ -60,8 +60,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                      "ColorId": 1,
+                      "Percent": 0.4
                     }
                   }
                 }
@@ -115,6 +115,13 @@
       "title": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Costo Total de Mantenimiento'"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -141,8 +148,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                      "ColorId": 1,
+                      "Percent": 0.4
                     }
                   }
                 }
@@ -168,13 +175,6 @@
                   "Value": "true"
                 }
               }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Costo Total Mantenimiento'"
-                }
-              }
             }
           }
         }
@@ -185,7 +185,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -213,17 +213,10 @@
       "border": [
         {
           "properties": {
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -236,6 +229,13 @@
                       "Percent": -0.25
                     }
                   }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
                 }
               }
             }

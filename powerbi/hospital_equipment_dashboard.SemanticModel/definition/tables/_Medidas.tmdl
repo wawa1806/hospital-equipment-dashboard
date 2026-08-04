@@ -228,6 +228,20 @@ table _Medidas
 		displayFolder: Plan
 		lineageTag: 197da6fa-c89a-46c0-8e71-b09dd9194477
 
+	measure 'Costo Total Adquisición' = SUM(dim_equipo[costo_adquisicion])
+		formatString: \$#,0.###############;\$-#,0.###############;\$#,0.###############
+		displayFolder: Costos
+		lineageTag: 65723b8a-6bb2-4dc2-aaf6-35f7f78f5b95
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CL"}
+
+	measure 'Costo Total' = [Costo Total Mantenimiento] + [Costo Total Adquisición]
+		formatString: \$#,0.###############;\$-#,0.###############;\$#,0.###############
+		displayFolder: Costos
+		lineageTag: 3dead290-9af0-4aad-84f9-fb8f3dcbfe7f
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CL"}
+
 	partition _Medidas = m
 		mode: import
 		source =

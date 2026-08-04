@@ -2433,7 +2433,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Costo": {
+			          "Costo Mantenimiento": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3165,6 +3165,88 @@ cultureInfo es-ES
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.costo_total_adquisición": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Costo Total Adquisición"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo total adquisición": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "costo aggregate adquisición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "costo overall adquisición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Costo Adquisición": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.costo_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Costo Total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "costo aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "costo overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
 			          }
 			        }
 			      ]
@@ -4031,6 +4113,105 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_equipos_have_fact_ordenes_trabajos"
+			        }
+			      ]
+			    },
+			    "fact_ordenes_trabajo_has_entity__medida_costo_total": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes_trabajo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordenes_trabajo": {
+			          "Target": {
+			            "Entity": "fact_ordenes_trabajo"
+			          }
+			        },
+			        "entity__medida.costo_total": {
+			          "Target": {
+			            "Entity": "entity__medida.costo_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordenes_trabajo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.costo_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_trabajos_have_costo_total"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_entity__medida_costo_total": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "entity__medida.costo_total": {
+			          "Target": {
+			            "Entity": "entity__medida.costo_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.costo_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_costo_total"
+			        }
+			      ]
+			    },
+			    "dim_equipo_has_entity__medida_costo_total_adquisición": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_equipo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_equipo": {
+			          "Target": {
+			            "Entity": "dim_equipo"
+			          }
+			        },
+			        "entity__medida.costo_total_adquisición": {
+			          "Target": {
+			            "Entity": "entity__medida.costo_total_adquisición"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_equipo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.costo_total_adquisición"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_equipos_have_costo_total_adquisición"
 			        }
 			      ]
 			    },

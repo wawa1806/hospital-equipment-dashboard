@@ -56,6 +56,7 @@ table dim_fecha
 		annotation SummarizationSetBy = Automatic
 
 	column anio_mes = dim_fecha[anio] & "-" & FORMAT(dim_fecha[mes_num], "00")
+		dataType: string
 		lineageTag: 851f4720-0a4f-4b4e-8661-6ac455cb08cc
 		summarizeBy: none
 

@@ -56,8 +56,28 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "logo8149056133518207.svg",
-          "path": "logo8149056133518207.svg",
+          "name": "Filter08567103821530864.png",
+          "path": "Filter08567103821530864.png",
+          "type": "Image"
+        },
+        {
+          "name": "BackGround26631233455208017.jpg",
+          "path": "BackGround26631233455208017.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "BackGround328770088013479334.jpg",
+          "path": "BackGround328770088013479334.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "BackGround106237257049251854.jpg",
+          "path": "BackGround106237257049251854.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "BackGround422463944826939852.jpg",
+          "path": "BackGround422463944826939852.jpg",
           "type": "Image"
         }
       ]

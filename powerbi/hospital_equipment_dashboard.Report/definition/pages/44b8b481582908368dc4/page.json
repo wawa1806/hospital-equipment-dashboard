@@ -49,7 +49,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Imagenología'"
+                          "Value": "'Apoyo a diagnóstico'"
                         }
                       }
                     ]
@@ -83,11 +83,46 @@
       }
     ]
   },
-  "visualInteractions": [
-    {
-      "source": "50e4aaddd4e5cd20aad6",
-      "target": "4399cc0d75a438e37332",
-      "type": "NoFilter"
-    }
-  ]
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'BackGround4.jpg'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "BackGround422463944826939852.jpg"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Normal'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
 }
