@@ -93,14 +93,14 @@ Drill-through desde cualquier clase en la página 2; informa costos, órdenes, f
 ## Arquitectura de datos
 ```mermaid
 erDiagram
-    dim_equipo||--o{ fact_ordenes_trabajo :  ""
-    dim_ubicacion||--o{ fact_ordenes_trabajo : ""
-    dim_tecnico||--o{ fact_ordenes_trabajo : ""
-    dim_tipo_mantenimiento||--o{ fact_ordenes_trabajo : ""
-    dim_fecha||--o{ fact_ordenes_trabajo : ""
-    dim_fecha||--o{ fact_plan_mantenimiento : ""
-    dim_equipo||--o{ fact_plan_mantenimiento : ""
-    dim_tipo_mantenimiento||--o{ fact_plan_mantenimiento : ""
+    dim_equipo||--o{ fact_ordenes_trabajo :  registra
+    dim_ubicacion||--o{ fact_ordenes_trabajo : ubica
+    dim_tecnico||--o{ fact_ordenes_trabajo : atiende
+    dim_tipo_mantenimiento||--o{ fact_ordenes_trabajo : clasifica
+    dim_fecha||--o{ fact_ordenes_trabajo : fecha_de
+    dim_fecha||--o{ fact_plan_mantenimiento : planifica
+    dim_equipo||--o{ fact_plan_mantenimiento : programa
+    dim_tipo_mantenimiento||--o{ fact_plan_mantenimiento : clasifica
 
     
     fact_ordenes_trabajo{
